@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Exo+2:200,300,400,600|Exo:200,300,400,600|Martel+Sans:200,300,400,600|Source+Sans+Pro:200,300,400,600|Titillium+Web:200,300,400,600|Ubuntu:300,400,500,700&subset=latin-ext');
 
-
+#news{
+    justify-content: center;
+    flex-basis: 50%;
+    margin-top: 10px;
+}
 .news .news-inner{
     display: flex;
     flex: 1;

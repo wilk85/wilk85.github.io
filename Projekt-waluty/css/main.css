@@ -117,7 +117,7 @@ span{
 }
 .l-out, .l-out-g30, .mid-inner, .news-inner, .currency-inner{
     border-radius: 10px;
-    border: 2px solid #aaa;
+    border: 2px solid #eee;
 }
 .item-radius-l{
     border-bottom-left-radius: 10px;
