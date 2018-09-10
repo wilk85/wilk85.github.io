@@ -29,7 +29,7 @@ button{
 }
 
 /* tooltipy */
-.tip-div{
+#mid-inner .tip-div{
     position: absolute;
     visibility: hidden;
     width: 100px;
@@ -44,10 +44,10 @@ button{
     top: -70%;
     transition: 0.1s ease;
 }
-.curr-tool-div:hover .tip-div{
+#mid-inner .curr-tool-div:hover .tip-div{
     visibility: visible;
 }
-.tip-div span{
+#mid-inner .tip-div span{
     font-size: 0.64em;
     font-weight: 100;
     text-align: center;
