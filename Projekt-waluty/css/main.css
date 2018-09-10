@@ -19,9 +19,13 @@ body, html{
     margin: 0;
     padding: 0;
     font-family: 'Karla', sans-serif;
-    
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/wal.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     box-sizing: border-box;
     font-size: 20px;
+    height: 100vh;
     /* background-color: #333; */
     /* color: #bdbaba;
     height: 30vh; */
@@ -88,7 +92,7 @@ span{
 .flex-items-div{
     display: flex;
     justify-content: space-evenly;
-    padding: 0 5px 0 10px;
+    padding: 0 0 0 10px;
 }
 .flex-itemsy{
     background-color: #555;
@@ -105,15 +109,15 @@ span{
     color: #fff;
 }
 
-.div-inner-style{ 
+.div-inner-style{
     padding: 6px;
-    background-color: #f2f2f2;
+    /* background-color: #f2f2f2; */
+    background-image: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8));
     color: #555;
 }
 .l-out, .l-out-g30, .mid-inner, .news-inner, .currency-inner{
     border-radius: 10px;
     border: 2px solid #aaa;
-    /* margin-bottom:; */
 }
 .item-radius-l{
     border-bottom-left-radius: 10px;
