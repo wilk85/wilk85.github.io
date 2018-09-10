@@ -1,0 +1,24 @@
+.curr-tool-div{
+    color: #fff;
+    font-size: 0.9em;
+    background-color: rgba(0,0,0,0.3);
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    line-height: 22px;
+    margin-top: 2px;
+    position: relative;
+}
+.get-data{
+    text-align: center;
+    margin-left: 6px;
+}
+button{
+    padding: 2px 6px;
+}
+.l-out-g30 .get-data{
+    margin-top: -2px;
+}
+.curr-tool-div:hover{
+    background-color: #333;
+}

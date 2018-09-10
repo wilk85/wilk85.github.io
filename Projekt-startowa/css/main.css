@@ -1,0 +1,65 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    color: #fff;
+}
+.container{
+    /* background-image: url(../img/img1.jpg); */
+    /* background-image: url(../img/img4.jpg); */
+    /* background-image: url(../img/img2.jpg); */
+    /* background-image: url(../img/img13.jpg); */
+    /* background-image: url(../img/img14.jpg); */
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../img/img14.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+label{
+    font-weight: 400;
+    font-size: .8em;
+}
+input{
+    margin-top: 0.6em;
+    border-radius: 2px;
+    border: 1px solid #333;
+    font-weight: 500;
+    font-size: 0.6em;
+    font-family: 'Ubuntu', sans-serif;
+    color: #111;
+    text-transform: uppercase;
+    line-height: 20px;
+    padding: 0.3em 0.5em;
+    background-color: #fff;
+}
+::placeholder{
+    color: #555;
+    text-transform: uppercase;
+}
+input[type=text]{
+    width: 160px;
+    text-transform: capitalize;
+}
+input[type=submit]{
+    width: 80px;   
+    margin-left: 0.4em;
+}
+input[type=submit]:hover{
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #fff;
+}
+.message, .username{
+    display: flex;
+}
+.message span{
+    margin: 0.2em 0.1em;
+    font-size: 2em;
+    display: flex;
+}

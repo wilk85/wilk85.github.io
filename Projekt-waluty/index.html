@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>.JSON.Api.data</title>
+    
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Mitr:200,300,400,500,600,700&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Biryani:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Martel+Sans:200,300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    
+
+    <div class="container-flex">
+
+<!-- banner.css -->
+        <!-- <div id="banner" class="banner"> 
+            
+            <div class="banner-left">
+                   
+            </div>
+            / tło baneru ma mieć ok w:200px sz:1000px // drugie mniejsze w:100px sz:  200px /
+            <div class="banner-right">
+                <img src="img/g3.png" alt="">
+            </div>
+
+        </div> -->
+
+<!--  -->
+<!--  -->
+
+<!-- lewy div -->
+        <!-- pierwsze małe okno -->
+        <div id="left" class="left flex-width">
+
+            <div class="l-out div-inner-style">
+                <h3>Aktualny kurs złota </h3>
+
+                <div class="l-out-text div-inner-style">
+                    <span class="span-text">Cena za 1 gram:</span>  
+                        <span id="gold-price" class="json-span"></span>
+                    <span class="span-text">zł</span> 
+                </div>
+            
+            </div>
+        <!-- koniec pierwszego małego okna -->
+
+        <!-- drugie wieksze okno -->
+            <div class="l-out-g30 div-inner-style">
+                <h3>Ostatnie notowania</h3>
+                <hr>
+
+                <!-- 1 rząd -->
+                <div class="gold-data">
+                    <span class="json-span">Data:</span>
+                    <span id="row1date" class="span-text"></span>
+                
+                    <span class="json-span">Cena:</span>
+                    <span id="row1price" class="span-text"></span>  
+                </div>
+
+                <!-- 2 rząd -->
+                <div class="gold-data">
+                    <span class="json-span">Data:</span>
+                    <span id="row2date" class="span-text"></span>
+                    
+                    <span class="json-span">Cena:</span>
+                    <span id="row2price" class="span-text"></span>
+                </div>
+
+                <!-- 3 rząd -->
+                <div class="gold-data">
+                    <span class="json-span">Data:</span>
+                    <span id="row3date" class="span-text"></span>
+                
+                    <span class="json-span">Cena:</span>
+                    <span id="row3price" class="span-text"></span>
+                </div>
+
+                <!-- 4 rząd -->
+                <div class="gold-data">
+                    <span class="json-span">Data:</span>
+                    <span id="row4date" class="span-text"></span>
+                    
+                    <span class="json-span">Cena:</span>
+                    <span id="row4price" class="span-text"></span>    
+                </div>
+
+                <!-- 5 rząd -->
+                <div class="gold-data">
+                    <span class="json-span">Data:</span>
+                    <span id="row5date" class="span-text"></span>
+                
+                    <span class="json-span">Cena:</span>
+                    <span id="row5price" class="span-text"></span>
+                </div>
+
+                <!-- 6 rząd -->
+                <div class="gold-data">
+                    <span class="json-span">Data:</span>
+                    <span id="row6date" class="span-text"></span>
+                
+                    <span class="json-span">Cena:</span>
+                    <span id="row6price" class="span-text"></span>
+                </div>
+
+                <!-- 7 rząd -->
+                <div class="gold-data">
+                    <span class="json-span">Data:</span>
+                    <span id="row7date" class="span-text"></span>
+            
+                    <span class="json-span">Cena:</span>
+                    <span id="row7price" class="span-text"></span>
+                </div>
+
+                <!-- 8 rząd -->
+                <div class="gold-data">
+                    <span class="json-span">Data:</span>
+                    <span id="row8date" class="span-text"></span>
+            
+                    <span class="json-span">Cena:</span>
+                    <span id="row8price" class="span-text"></span>
+                </div>
+
+                <div class="get-data div-inner-style">
+                    <button>Pobierz</button>
+                    <span>Kursy złota z ostatniego miesiąca</span>
+                </div>
+
+            </div>
+        <!-- koniec drugiego wiekszego okna -->
+
+        </div>
+<!-- koniec lewego -->
+    
+<!-- srodkowy div -->
+        <div id="mid" class="mid flex-width"> 
+           
+            <div id="mid-inner" class="mid-inner div-inner-style">
+                <h3>Aktualne kursy walut</h3>
+                
+                <!-- euro -->
+                <div class="flex-items-div">
+                    <div class="flex-itemsy span-text item-radius-tl">
+                        <span class="">EUR</span>
+                    </div>
+                    <div class="flex-itemsy span-text item-radius-tr">
+                        <span id="1right" class=""></span>
+                    </div>
+                    <div class="curr-tool-div">
+                      <span class="curr-span">?</span>
+                      <p class="tip"></p>
+                    </div>
+                </div>
+
+                <!-- dolar usd -->
+                <div class="flex-items-div">
+                    <div class="flex-itemsy span-text ">
+                        <span class="hover-row">USD</span>
+                    </div>
+                    <div class="flex-itemsy span-text ">
+                        <span id="2right" class="hover-row"></span>
+                    </div>
+                    <div class="curr-tool-div">
+                      <span class="curr-span">?</span>
+                    </div>
+                </div>  
+
+                <!-- funt gbp -->
+                <div class="flex-items-div">
+                    <div class="flex-itemsy span-text ">
+                        <span class="">GBP</span>
+                    </div>
+                    <div class="flex-itemsy span-text ">
+                        <span id="3right" class=""></span>
+                    </div>
+                    <div class="curr-tool-div">
+                      <span class="curr-span">?</span>
+                    </div>
+                </div>  
+
+                <!-- frank -->
+                <div class="flex-items-div">
+                    <div class="flex-itemsy span-text ">
+                        <span class="">CHF</span>
+                    </div>
+                    <div class="flex-itemsy span-text ">
+                        <span id="4right" class=""></span>
+                    </div>
+                    <div class="curr-tool-div">
+                      <span class="curr-span">?</span>
+                    </div>
+                </div>  
+
+                <!-- dolar kanadyjski -->
+                <div class="flex-items-div">
+                    <div class="flex-itemsy span-text ">
+                        <span class="">CAD</span>
+                    </div>
+                    <div class="flex-itemsy span-text ">
+                        <span id="5right" class=""></span>
+                    </div>
+                    <div class="curr-tool-div">
+                      <span class="curr-span">?</span>
+                    </div>
+                </div>  
+
+                <!-- rubel -->
+                <div class="flex-items-div">
+                    <div class="flex-itemsy span-text ">
+                        <span class="">RUB</span>
+                    </div>
+                    <div class="flex-itemsy span-text ">
+                        <span id="6right" class=""></span>
+                    </div>
+                    <div class="curr-tool-div">
+                      <span class="curr-span">?</span>
+                    </div>
+                </div>  
+
+                <!-- yuan -->
+                <div class="flex-items-div">
+                    <div class="flex-itemsy span-text ">
+                        <span class="">CNY</span>
+                    </div>
+                    <div class="flex-itemsy span-text ">
+                        <span id="7right" class=""></span>
+                    
+                    </div>
+                    <div class="curr-tool-div">
+                      <span class="curr-span">?</span>
+                    </div>
+                </div>  
+
+                <!-- korona norweska -->
+                <div class="flex-items-div">
+                    <div class="flex-itemsy span-text item-radius-l">
+                        <span class="">NOK</span>
+                    </div>
+                    <div class="flex-itemsy span-text item-radius-r">
+                        <span id="8right" class=""></span>
+                    </div>
+                    <div class="curr-tool-div">
+                      <span class="curr-span">?</span>
+                    </div>
+                </div>  
+
+                <div class="get-data div-inner-style">
+                    <button>Pobierz</button>
+                    <span>Kursy walut z ostatniego miesiąca</span>
+                </div>
+
+            </div><!--div .mid-inner-->
+                        
+        </div> 
+<!-- koniec srodkowego -->
+        
+
+<!-- kryptowaluty -->
+        <div class="currency flex-width">
+
+            <div class="currency-inner div-inner-style">
+                <h3>Aktualne kursy kryptowalut</h3>
+
+                <!-- 1. bitcoin -->
+                <div class="flex-items-div">
+                    <div class="flex-itemsy item-radius-tl">
+                        <span class="span-text">BTC</span>
+                    </div>
+                    <div class="flex-itemsy item-radius-tr">  
+                        <span id='btc' class="span-text"></span>
+                    </div>
+                    <div class="curr-tool-div">
+                      <span class="curr-span">?</span>
+                    </div>
+                </div>
+
+                <!-- 2. bitcoin cash -->
+                <div class="flex-items-div">
+                    <div class="flex-itemsy ">
+                        <span class="span-text">BCH</span>
+                    </div>
+                    <div class="flex-itemsy">  
+                        <span id='bch' class="span-text"></span>
+                    </div>
+                    <div class="curr-tool-div">
+                      <span class="curr-span">?</span>
+                    </div>
+                </div>
+
+                <!-- 3. ethereum -->
+                <div class="flex-items-div">
+                    <div class="flex-itemsy ">
+                        <span class="span-text">ETH</span>
+                    </div>
+                    <div class="flex-itemsy">  
+                        <span id='eth' class="span-text"></span>
+                    </div>
+                    <div class="curr-tool-div">
+                      <span class="curr-span">?</span>
+                    </div>
+                </div>
+                
+                <!-- 4. dash -->
+                <div class="flex-items-div">
+                    <div class="flex-itemsy ">
+                        <span class="span-text">DASH</span>
+                    </div>
+                    <div class="flex-itemsy">  
+                        <span id='dash' class="span-text"></span>
+                    </div>
+                    <div class="curr-tool-div">
+                      <span class="curr-span">?</span>
+                    </div>
+                </div>
+
+                <!-- 5. zcash -->
+                <div class="flex-items-div">
+                    <div class="flex-itemsy ">
+                        <span class="span-text">ZEC</span>
+                    </div>
+                    <div class="flex-itemsy">  
+                        <span id='zec' class="span-text"></span>
+                    </div>
+                    <div class="curr-tool-div">
+                      <span class="curr-span">?</span>
+                    </div>
+                </div>
+
+                <!-- 6. monero -->
+                <div class="flex-items-div">
+                    <div class="flex-itemsy ">
+                        <span class="span-text">XMR</span>
+                    </div>
+                    <div class="flex-itemsy">  
+                        <span id='xmr' class="span-text"></span>
+                    </div>
+                    <div class="curr-tool-div">
+                      <span class="curr-span">?</span>
+                    </div>
+                </div>
+                
+                <!-- 7. lite coin -->
+                <div class="flex-items-div">
+                    <div class="flex-itemsy ">
+                        <span class="span-text">LTC</span>
+                    </div>
+                    <div class="flex-itemsy">  
+                        <span id='ltc' class="span-text"></span>
+                    </div>
+                    <div class="curr-tool-div">
+                      <span class="curr-span">?</span>
+                    </div>
+                </div>
+
+                <!-- 8. neo -->
+                <div class="flex-items-div">
+                    <div class="flex-itemsy item-radius-l">
+                        <span class="span-text">NEO</span>
+                    </div>
+                    <div class="flex-itemsy item-radius-r">  
+                        <span id='neo' class="span-text"></span>
+                    </div>
+                    <div class="curr-tool-div">
+                      <span class="curr-span">?</span>
+                    </div>
+                </div>
+
+                <div class="get-data div-inner-style">
+                    <button>Pobierz</button>
+                    <span>Kursy kryptowalut z ostatniego miesiąca</span>
+                </div>
+
+            </div>
+            
+        </div>
+<!-- koniec kryptowalut -->
+
+
+        <div class="news flex-width" >
+            <div class="news-inner div-inner-style">
+                <article>
+                    <h3>Wiadomosci</h3>
+                    <p class="p-data">Środa, 29.08.2018  </p>
+                    <p class="news-area">W tym tygodniu polski złoty umacnia się minimalnie względem euro z poziomu 4,28 do poziomów 4,2650-4,2750. USDPLN na zakończenie poniedziałkowej sesji zamknął się na poziomie 3,6548 i to zmieniło trend na dziennym wykresie Ichimoku na spadkowy, a także wygenerowało sygnał do sprzedaży. <br><br>
+                    Niechęć do ryzyka spowodowana turecką lirą, a także zjawisko „zarażenia” w odniesieniu do rynków wschodzących, osłabiły polskiego złotego odpowiednio 2,3% i 5,2% względem euro oraz dolara z początkiem sierpnia. Polski złoty oraz Giełda Papierów Wartościowych w Warszawie są zazwyczaj dość wrażliwe na rozwój sytuacji na rynkach wschodzących.
+                    </p>
+
+                    / zrobić tutaj przycisk do powiększania artykułu, lub przewijanie stron /
+                </article>
+            </div>
+            
+        </div>
+        
+
+        <!-- <div class="div-inner-style flex-width"></div> -->
+        
+        <!-- <div class="div-inner-style flex-width"></div> -->
+
+    </div>
+
+    
+
+    
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

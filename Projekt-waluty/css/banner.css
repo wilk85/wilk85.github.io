@@ -1,0 +1,28 @@
+#banner{
+    display: flex;
+    padding: 5px 15px;
+    /* flex-direction: column; */
+    width: 100%;
+    justify-content: space-between;
+    background-color: #333;
+    height: 15vh;
+    color: #fff;
+}
+.banner-left{
+    flex-basis: 40%;
+    background-color: aqua;
+    height: 10vh;
+}
+.banner-right{
+    flex-basis: 60%;
+    justify-self: flex-start;
+    background-color: red;
+    height: 15vh;
+    text-align: right;
+}
+.banner-right img{
+    /* width: 100%; */
+    height: 100%;
+    background-color: #fff;
+
+}
