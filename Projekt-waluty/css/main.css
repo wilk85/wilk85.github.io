@@ -71,7 +71,7 @@ span{
     justify-items: center;
     padding: 10px 15px;
     max-width: 1300px;
-    margin: 0 auto;
+    margin: 0 auto; 
 }
 .left, .mid, .news, .currency{
     padding: 8px 8px 4px;
