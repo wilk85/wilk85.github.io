@@ -67,8 +67,11 @@ span{
     display: flex;
     flex-flow: row wrap; 
     flex-wrap: wrap;
-    justify-content:center;
+    justify-content: center;
+    justify-items: center;
     padding: 10px 15px;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 .left, .mid, .news, .currency{
     padding: 8px 8px 4px;
@@ -85,6 +88,7 @@ span{
 .flex-items-div{
     display: flex;
     justify-content: space-evenly;
+    padding: 0 5px 0 10px;
 }
 .flex-itemsy{
     background-color: #555;
