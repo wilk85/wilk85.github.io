@@ -42,14 +42,12 @@ button{
     left: 100%;
     top: -70%;
     transition: 0.1s ease;
-}
-#mid-inner .curr-tool-div:hover .tip-div{
-    visibility: visible;
-}
-#mid-inner .tip-div{
     font-size: 0.95em;
     font-weight: 100;
     text-align: center;
     color: #fff;
+}
+#mid-inner .curr-tool-div:hover .tip-div{
+    visibility: visible;
 }
 

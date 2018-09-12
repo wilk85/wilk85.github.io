@@ -85,35 +85,35 @@ $(document).ready(function(){
 
     // tooltipy waluty
 
-    $.getJSON('http://api.nbp.pl/api/exchangerates/rates/a/eur/last/10/?format=json', function(eur2){
+    $.getJSON('https://api.nbp.pl/api/exchangerates/rates/a/eur/last/10/?format=json', function(eur2){
         // console.log(data3.rates[8].mid);
         $('#tt-1').html(eur2.rates[8].mid.toFixed(3));
     });
-    $.getJSON('http://api.nbp.pl/api/exchangerates/rates/a/usd/last/10/?format=json', function(usd2){
+    $.getJSON('https://api.nbp.pl/api/exchangerates/rates/a/usd/last/10/?format=json', function(usd2){
         // console.log(data3.rates[8].mid);
         $('#tt-2').html(usd2.rates[8].mid.toFixed(3));
     });
-    $.getJSON('http://api.nbp.pl/api/exchangerates/rates/a/gbp/last/10/?format=json', function(gbp2){
+    $.getJSON('https://api.nbp.pl/api/exchangerates/rates/a/gbp/last/10/?format=json', function(gbp2){
         // console.log(data3.rates[8].mid);
         $('#tt-3').html(gbp2.rates[8].mid.toFixed(3));
     });
-    $.getJSON('http://api.nbp.pl/api/exchangerates/rates/a/chf/last/10/?format=json', function(chf2){
+    $.getJSON('https://api.nbp.pl/api/exchangerates/rates/a/chf/last/10/?format=json', function(chf2){
         // console.log(data3.rates[8].mid);
         $('#tt-4').html(chf2.rates[8].mid.toFixed(3));
     });
-    $.getJSON('http://api.nbp.pl/api/exchangerates/rates/a/cad/last/10/?format=json', function(cad2){
+    $.getJSON('https://api.nbp.pl/api/exchangerates/rates/a/cad/last/10/?format=json', function(cad2){
         // console.log(data3.rates[8].mid);
         $('#tt-5').html(cad2.rates[8].mid.toFixed(3));
     });
-    $.getJSON('http://api.nbp.pl/api/exchangerates/rates/a/rub/last/10/?format=json', function(rub2){
+    $.getJSON('https://api.nbp.pl/api/exchangerates/rates/a/rub/last/10/?format=json', function(rub2){
         // console.log(data3.rates[8].mid);
         $('#tt-6').html(rub2.rates[8].mid.toFixed(3));
     });
-    $.getJSON('http://api.nbp.pl/api/exchangerates/rates/a/cny/last/10/?format=json', function(cny2){
+    $.getJSON('https://api.nbp.pl/api/exchangerates/rates/a/cny/last/10/?format=json', function(cny2){
         // console.log(data3.rates[8].mid);
         $('#tt-7').html(cny2.rates[8].mid.toFixed(3));
     });
-    $.getJSON('http://api.nbp.pl/api/exchangerates/rates/a/nok/last/10/?format=json', function(nok2){
+    $.getJSON('https://api.nbp.pl/api/exchangerates/rates/a/nok/last/10/?format=json', function(nok2){
         // console.log(data3.rates[8].mid);
         $('#tt-8').html(nok2.rates[8].mid.toFixed(3));
     });
