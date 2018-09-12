@@ -152,6 +152,40 @@ $(document).ready(function(){
         $('#neo').html(neo.PLN.toFixed(2));
     });
     
+    // tooltipy kryptowaluty
+
+    $.getJSON('https://min-api.cryptocompare.com/data/dayAvg?fsym=BTC&tsym=PLN', function(btc2){
+        // console.log(data3.PLN);
+        $('#tt-11').html(btc2.PLN.toFixed(2));
+    });
+    $.getJSON('https://min-api.cryptocompare.com/data/dayAvg?fsym=BCH&tsym=PLN', function(bch2){
+        // console.log(data3.PLN);
+        $('#tt-12').html(bch2.PLN.toFixed(2));
+    });
+    $.getJSON('https://min-api.cryptocompare.com/data/dayAvg?fsym=ETH&tsym=PLN', function(eth2){
+        // console.log(data3.PLN);
+        $('#tt-13').html(eth2.PLN.toFixed(2));
+    });
+    $.getJSON('https://min-api.cryptocompare.com/data/dayAvg?fsym=DASH&tsym=PLN', function(dash2){
+        // console.log(data3.PLN);
+        $('#tt-14').html(dash2.PLN.toFixed(2));
+    });
+    $.getJSON('https://min-api.cryptocompare.com/data/dayAvg?fsym=ZEC&tsym=PLN', function(zec2){
+        // console.log(data3.PLN);
+        $('#tt-15').html(zec2.PLN.toFixed(2));
+    });
+    $.getJSON('https://min-api.cryptocompare.com/data/dayAvg?fsym=XMR&tsym=PLN', function(xmr2){
+        // console.log(data3.PLN);
+        $('#tt-16').html(xmr2.PLN.toFixed(2));
+    });
+    $.getJSON('https://min-api.cryptocompare.com/data/dayAvg?fsym=LTC&tsym=PLN', function(ltc2){
+        // console.log(data3.PLN);
+        $('#tt-17').html(ltc2.PLN.toFixed(2));
+    });
+    $.getJSON('https://min-api.cryptocompare.com/data/dayAvg?fsym=NEO&tsym=PLN', function(neo2){
+        // console.log(data3.PLN);
+        $('#tt-18').html(neo2.PLN.toFixed(2));
+    });
 
     //Wstawić datę na stronę
     // var d = new Date();
