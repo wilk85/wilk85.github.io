@@ -11,7 +11,7 @@
 }
 .get-data{
     text-align: center;
-    padding: 6px;
+    padding: 10px 6px 6px 6px;
     color: #333;
     background-color: inherit;
 }
@@ -32,9 +32,8 @@ button{
 #mid-inner .tip-div{
     position: absolute;
     visibility: hidden;
-    width: 100px;
+    width: 140px;
     display: inline-block;
-    color: #333;
     background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
     border-radius: 4px;
     border: 1px solid #fff;
@@ -47,10 +46,10 @@ button{
 #mid-inner .curr-tool-div:hover .tip-div{
     visibility: visible;
 }
-#mid-inner .tip-div span{
-    font-size: 0.64em;
+#mid-inner .tip-div{
+    font-size: 0.95em;
     font-weight: 100;
     text-align: center;
     color: #fff;
-    /* line-height: 18px; */
 }
+
