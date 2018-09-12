@@ -130,13 +130,7 @@
                     <span id="row8price" class="span-text"></span>
                 </div>
 
-                <div class="get-data ">
-                    <button>
-                        <i class="fas fa-arrow-down"></i>
-                        <span>Pobierz</span>   
-                    </button>
-                    <span>Kursy złota z ostatniego miesiąca</span>
-                </div>
+                
 
             </div>
         <!-- koniec drugiego wiekszego okna -->
@@ -287,13 +281,7 @@
                     </div>
                 </div>  
 
-                <div class="get-data ">
-                    <button>
-                        <i class="fas fa-arrow-down"></i>
-                        <span> Pobierz</span>
-                    </button>
-                    <span>Kursy walut z ostatniego miesiąca</span>
-                </div>
+               
 
             </div><!--div .mid-inner-->
                         
@@ -443,14 +431,7 @@
                     </div>
                 </div>
 
-                <div class="get-data ">
-                        
-                    <button>
-                        <i class="fas fa-arrow-down"></i>
-                        <span>Pobierz</span> 
-                    </button>
-                    <span>Kursy kryptowalut z ostatniego miesiąca</span>
-                </div>
+               
 
             </div>
             
@@ -458,18 +439,36 @@
 <!-- koniec kryptowalut -->
 
 
-        <div id="news" class="newsnews flex-width" >
-            <div class="news-inner div-inner-style">
-                <article>
-                    <h2>//STRONA W BUDOWIE...//</h2>
-                    <h3>Wiadomosci</h3>
-                    <p class="p-data">Środa, 29.08.2018  </p>
-                    <p class="news-area">W tym tygodniu polski złoty umacnia się minimalnie względem euro z poziomu 4,28 do poziomów 4,2650-4,2750. USDPLN na zakończenie poniedziałkowej sesji zamknął się na poziomie 3,6548 i to zmieniło trend na dziennym wykresie Ichimoku na spadkowy, a także wygenerowało sygnał do sprzedaży. <br><br>
-                    Niechęć do ryzyka spowodowana turecką lirą, a także zjawisko „zarażenia” w odniesieniu do rynków wschodzących, osłabiły polskiego złotego odpowiednio 2,3% i 5,2% względem euro oraz dolara z początkiem sierpnia. Polski złoty oraz Giełda Papierów Wartościowych w Warszawie są zazwyczaj dość wrażliwe na rozwój sytuacji na rynkach wschodzących.
-                    </p>
+        <div id="news" class="news flex-width" >
+            
 
-                    / zrobić tutaj przycisk do powiększania artykułu, lub przewijanie stron /
-                </article>
+            <div class="news-inner div-inner-style">
+
+                <nav id="tab-container">
+                    <ul class="button-container">
+                        <li id="button-1">Wiadomosci finansowe</li>
+                        <li id="button-2">Starsze notowania złota</li>
+                        <li id="button-3">Ostatnie notowania walut</li>
+                        <li id="button-4">Ostatnie notowania kryptowalut</li>
+                    </ul>
+                </nav>
+
+                <div id="tab-news" class="tab tab-news">
+                    <article>
+                        <h3>Wiadomosci</h3>
+                        <p class="p-data">Środa, 29.08.2018  </p>
+                        <p class="news-area">W tym tygodniu polski złoty umacnia się minimalnie względem euro z poziomu 4,28 do poziomów 4,2650-4,2750. USDPLN na zakończenie poniedziałkowej sesji zamknął się na poziomie 3,6548 i to zmieniło trend na dziennym wykresie Ichimoku na spadkowy, a także wygenerowało sygnał do sprzedaży. <br><br>
+                        Niechęć do ryzyka spowodowana turecką lirą, a także zjawisko „zarażenia” w odniesieniu do rynków wschodzących, osłabiły polskiego złotego odpowiednio 2,3% i 5,2% względem euro oraz dolara z początkiem sierpnia. Polski złoty oraz Giełda Papierów Wartościowych w Warszawie są zazwyczaj dość wrażliwe na rozwój sytuacji na rynkach wschodzących.
+                        </p>
+    
+                        / zrobić tutaj przycisk do powiększania artykułu, lub przewijanie stron /
+                    </article>
+                </div>
+
+                <div class="tab tab-gold"></div>
+                <div class="tab tab-currency"></div>
+                <div class="tab tab-crypto"></div>
+               
             </div>
             
         </div>
@@ -482,10 +481,8 @@
     </div>
 
     
-
-    
-
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/buttons.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,31 +1,17 @@
 .curr-tool-div{
     color: #fff;
     font-size: 0.9em;
-    background-color: rgba(0,0,0,0.3);
+    background-color: #999;
     height: 24px;
     width: 24px;
     border-radius: 50%;
     line-height: 22px;
-    margin: 3px 5px;
+    margin: 5px 5px 2px 5px;
     position: relative;
-}
-.get-data{
-    text-align: center;
-    padding: 10px 6px 6px 6px;
-    color: #333;
-    background-color: inherit;
-}
-.get-data span{
-    font-family: 'Source Sans Pro', sans-serif;
-}
-button{
-    padding: 2px 6px;
-}
-.l-out-g30 .get-data{
-    margin-top: -2px;
 }
 .curr-tool-div:hover{
     background-color: #333;
+    cursor: help;
 }
 
 /* tooltipy */
@@ -46,8 +32,10 @@ button{
     font-weight: 100;
     text-align: center;
     color: #fff;
+    
 }
 #mid-inner .curr-tool-div:hover .tip-div, #currency-inner .curr-tool-div:hover .tip-div{
     visibility: visible;
+    
 }
 

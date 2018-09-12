@@ -1,0 +1,15 @@
+
+:boxy
+    #555
+    :text
+        #f2f2f2ca
+    :hover
+        #333
+        :text
+            #fff
+
+:pytajniki
+    #999
+    :text   
+        #fff
+        
