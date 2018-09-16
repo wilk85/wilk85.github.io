@@ -3,8 +3,7 @@
 
 #news{
     margin-top: 10px;
-    align-items: center;
-    
+    align-items: center;   
 }
 #news .news-inner{
     width: 55%;
@@ -48,7 +47,7 @@
     text-align: left;
     text-indent: 20px;
 }
-
+/* zakładki */
 #tab-container {
     display: flex;
     justify-content: flex-start;
@@ -82,23 +81,50 @@
     background-color: #333;
     color: #fff;
 }
-/* ukrywanie */
-#news-inner .tab-news{
-    /* visibility: hidden; */
-    padding: 0 10px 10px 10px; 
-}
-#news-inner .tab{
+
+/* taby kontener */
+#tab-inner-container{
     margin-top: 10px;
     background-color: #dddddd9b;
     border: 1px solid rgb(195, 195, 195);
     border-radius: 5px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    padding: 10px;
 }
-#news-inner .tab-gold, 
-#news-inner .tab-currency, 
-#news-inner .tab-crypto{
-    visibility: hidden;
+
+/* taby pojedynczo */
+#tab-inner-container .tab-currency, 
+#tab-inner-container .tab-crypto{
+    display: none;
     margin: 0;
     padding: 0;
+}
+
+/* tab news */
+#tab-inner-container .tab-news{
+    padding: 0 10px 10px 10px; 
+    display: none;
+}
+
+/* tab gold */
+#tab-inner-container .tab-gold{
+    display: flex;
+    justify-content: space-evenly;
+    /* display: none; */
+}
+#tab-inner-container .tab-gold .span-text{
+    line-height: 1.1;
+    font-family: 'Martel Sans', serif;
+    font-weight: 300;
+    font-size: 0.66em;
+}
+
+/* tab currency */
+
+/* tab crypto */
+#tab-inner-container .tab-crypto{
+    display: flex;
+    justify-content: space-evenly;
+
 }
