@@ -63,26 +63,38 @@ $(document).ready(function(){
     
 
     /* TOOLTIPY WCZORAJSZEGO KURSU KRYPTOWALUT */
-    function tooltip_crypto(cr_name, id, id2, day_nr){
-        $.getJSON('https://min-api.cryptocompare.com/data/histoday?fsym='+cr_name+'&tsym=PLN&limit=1', function(data){
+    /* WYŚWIETLANIE CENY W TABIE OSTATNIE NOTOW. KRYPTO  */
+    function crypto_val_tooltip(cr_name, id, id2, id3, id4, day_nr){
+        $.getJSON('https://min-api.cryptocompare.com/data/histoday?fsym='+cr_name+'&tsym=PLN&limit=3', function(data){
             // console.log(data.Data);
             
-            // console.log(new Date(data.Data[0].time*1000).toLocaleDateString('sv-SE')); // wczoraj
-            // console.log(new Date(data.Data[1].time*1000).toLocaleDateString('sv-SE')); // dzisiaj
+            // console.log(new Date(data.Data[day_nr].time*1000).toLocaleDateString('sv-SE')); // dzisiaj
+            // console.log(new Date(data.Data[day_nr-1].time*1000).toLocaleDateString('sv-SE')); // wczoraj
+            // console.log(new Date(data.Data[day_nr-2].time*1000).toLocaleDateString('sv-SE')); // przedwczoraj
+            // console.log(new Date(data.Data[day_nr-3].time*1000).toLocaleDateString('sv-SE')); // 3 dni wczesniej
+            
+            // console.log(data.Data[3].close);
+            // console.log(data.Data[2].close);
+            // console.log(data.Data[1].close);
+            // console.log(data.Data[0].close);
+            // console.log(data.Data[day_nr-3]);
             
             $('#'+id).html(data.Data[day_nr].close.toFixed(2));
             $('#tt-'+id2).html(data.Data[day_nr-1].close.toFixed(2));
+            $('#crprice'+id3).html(data.Data[day_nr-2].close.toFixed(2));
+            $('#crprice'+id4).html(data.Data[day_nr-3].close.toFixed(2));
+
         });
     };
-    
-    tooltip_crypto('BTC', 'btc', 11, 1);
-    tooltip_crypto('BCH', 'bch', 12, 1);
-    tooltip_crypto('ETH', 'eth', 13, 1);
-    tooltip_crypto('DASH', 'dash', 14, 1);
-    tooltip_crypto('ZEC', 'zec', 15, 1);
-    tooltip_crypto('XMR', 'xmr', 16, 1);
-    tooltip_crypto('LTC', 'ltc', 17, 1);
-    tooltip_crypto('NEO', 'neo', 18, 1);
+                    // cr_name  id   i2 i3 i4 day_nr
+    crypto_val_tooltip('BTC', 'btc', 11, 2, 1, 3);
+    crypto_val_tooltip('BCH', 'bch', 12, 4, 3, 3);
+    crypto_val_tooltip('ETH', 'eth', 13, 6, 5, 3);
+    crypto_val_tooltip('DASH', 'dash', 14, 8, 7, 3);
+    crypto_val_tooltip('ZEC', 'zec', 15, 10, 9, 3);
+    crypto_val_tooltip('XMR', 'xmr', 16, 12, 11, 3);
+    crypto_val_tooltip('LTC', 'ltc', 17, 14, 13, 3);
+    crypto_val_tooltip('NEO', 'neo', 18, 16, 15, 3);
 
     /* DATA POD KRYPTOWALUTAMI */
     $.getJSON('https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=PLN&limit=3', function(data){
@@ -138,35 +150,6 @@ $(document).ready(function(){
         data_yester(1, 2);
     });
 
-    /* WYŚWIETLANIE CENY W TABIE OSTATNIE NOTOW. KRYPTO  */
-    function crypt_price_show(cry_name, day_nr, row_id){ // cry_name - dużymi liteami
-        $.getJSON('https://min-api.cryptocompare.com/data/histoday?fsym='+cry_name+'&tsym=PLN&limit=3', function(data9){
-            // console.log(data9.Data[day_nr].close);
-            // console.log(new Date(data9.Data[1].time*1000).toLocaleDateString('sv-SE'));
-            // console.log(data9.Data[1]);
-            // console.log(data9.Data[1].close);
-            $('#crprice'+row_id).html(data9.Data[day_nr].close.toFixed(2));
-
-        });
-    };
-
-    crypt_price_show('BTC', 0, '1');
-    crypt_price_show('BTC', 1, '2');
-    crypt_price_show('BCH', 0, '3');
-    crypt_price_show('BCH', 1, '4');
-    crypt_price_show('ETH', 0, '5');
-    crypt_price_show('ETH', 1, '6');
-    crypt_price_show('DASH', 0, '7');
-    crypt_price_show('DASH', 1, '8');
-    crypt_price_show('ZEC', 0, '9');
-    crypt_price_show('ZEC', 1, '10');
-    crypt_price_show('XMR', 0, '11');
-    crypt_price_show('XMR', 1, '12');
-    crypt_price_show('LTC', 0, '13');
-    crypt_price_show('LTC', 1, '14');
-    crypt_price_show('NEO', 0, '15');
-    crypt_price_show('NEO', 1, '16');
-       
 
     // setInterval(goldData, 10*(6*360000));
     
