@@ -1,15 +1,25 @@
+// for(var i=1; i<17; i++){
+//     console.log(i++);
+// }
 
-// window.webkitRequestFileSystem(window.PERSISTENT , 1024*1024, FileSave);
-$('#buttonGold').click(function(){
-    
-    window.webkitRequestFileSystem(window.TEMPORARY, 1024*1024, saveFile);
-    function saveFile(localstorage){
-        
-        localstorage.root.getFile('info.txt', {create:'true'}, function(dataFile){
-            dataFile.createWriter(function(dataContent){
-                var blob = new Blob(['lol'], {type: 'text/plain'});
-                dataContent.write(blob);
-            });
-        });
-    }
+$(document).ready(function(){
+    $('#button-1').on('click', function(){
+        $('#tab-news').css('display', 'block');
+        $('#tab-gold').css('display', 'none');
+        $('#tab-currency').css('display', 'none');
+        $('#tab-crypto').css('display', 'none');
+    });
+    $('#button-2').on('click', function(){
+        $('#tab-news').css('display', 'none');
+        $('#tab-gold').css('display', 'flex');
+        $('#tab-currency').css('display', 'none');
+        $('#tab-crypto').css('display', 'none'); 
+    });   
+    $('#button-4').on('click', function(){
+        $('#tab-news').css('display', 'none');
+        $('#tab-gold').css('display', 'none');
+        $('#tab-currency').css('display', 'none');
+        $('#tab-crypto').css('display', 'flex'); 
+    });   
+
 });

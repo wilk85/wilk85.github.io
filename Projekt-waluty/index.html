@@ -43,7 +43,7 @@
 
             <div class="l-out div-inner-style">
                 <h3>Aktualny kurs złota </h3>
-
+                <!-- <hr> -->
                 <div class="l-out-text">
                     <span class="span-text">Cena za 1 gram:</span>  
                         <span id="row0price" class="json-span"></span>
@@ -130,7 +130,11 @@
                     <span id="row8price" class="span-text"></span>
                 </div>
 
-                
+                <!-- Panel informacyjny, data pobrania danych -->
+                <div id="info-panel-container" class="info-panel">
+                    <span class="json-span">Najnowsze dane z dnia: </span>
+                    <span id="data-l-out-g30" class="span-text"></span>
+                </div>
 
             </div>
         <!-- koniec drugiego wiekszego okna -->
@@ -281,7 +285,11 @@
                     </div>
                 </div>  
 
-               
+                <!-- Panel informacyjny, data pobrania danych -->
+                <div id="info-panel-container" class="info-panel">
+                    <span class="json-span">Najnowsze dane z dnia: </span>
+                    <span id="data-mid-inner" class="span-text"></span>
+                </div>
 
             </div><!--div .mid-inner-->
                         
@@ -431,11 +439,18 @@
                     </div>
                 </div>
 
-               
+                <!-- Panel informacyjny, data pobrania danych -->
+                <div id="info-panel-container" class="info-panel">
+                    <span class="json-span">Najnowsze dane z dnia: </span>
+                    <span id="data-currency" class="span-text"></span>
+                </div>
 
             </div>
             
+            
+
         </div>
+        
 <!-- koniec kryptowalut -->
 
 
@@ -444,6 +459,7 @@
 
             <div id="news-inner" class="news-inner div-inner-style">
 
+                <!-- nawigacja tabów - przyciski -->
                 <nav id="tab-container">
                     <ul class="button-container">
                         <li id="button-1">Wiadomosci finansowe</li>
@@ -453,6 +469,7 @@
                     </ul>
                 </nav>
 
+                <!-- okienka z informacjami po kliknieciu w taby - przyciski -->
                 <div id="tab-inner-container">
 
                     <div id="tab-news" class="tab tab-news">
@@ -618,9 +635,168 @@
                     <div id="tab-currency" class="tab tab-currency">
 
                     </div>
-                    <div class="tab tab-crypto">
-                        <div id="tabcrypto-left">
+
+                    <div id="tab-crypto" class="tab tab-crypto">
+
+                        <!-- LEWA -->
+                        <div id="tab-crypto-left">
+
+                            <!-- BTC // RZĄD 1 - 2  -->
+                            <h5> BTC</h5>
+                            <div class="row-crypto">
+                                <span class="json-span">Data:</span>
+                                <span id="crrow1" class="span-text"></span>
+                                <span class="json-span">Cena:</span>
+                                <span id="crprice1" class="span-text"></span>  
+                                <br>
+                            </div>
                             
+                            <div class="row-crypto">
+                                <span class="json-span">Data:</span>
+                                <span id="crrow2" class="span-text"></span>
+                                <span class="json-span">Cena:</span>
+                                <span id="crprice2" class="span-text"></span>  
+                                <br>
+                            </div>
+
+                            <!-- BCH // RZĄD 3 - 4  -->
+
+                            <h5 class="h5margin"> BCH</h5>
+                            <div class="row-crypto">
+                                <span class="json-span">Data:</span>
+                                <span id="crrow3" class="span-text"></span>
+                                <span class="json-span">Cena:</span>
+                                <span id="crprice3" class="span-text"></span>  
+                                <br>
+                            </div>
+
+                            <div class="row-crypto">
+                                <span class="json-span">Data:</span>
+                                <span id="crrow4" class="span-text"></span>
+                                <span class="json-span">Cena:</span>
+                                <span id="crprice4" class="span-text"></span>  
+                                <br>
+                            </div>
+                            
+                            <!-- ETH // RZĄD 5 - 6  -->
+                            <h5 class="h5margin"> ETH</h5>
+                            <div class="row-crypto">
+                                <span class="json-span">Data:</span>
+                                <span id="crrow5" class="span-text"></span>
+                                <span class="json-span">Cena:</span>
+                                <span id="crprice5" class="span-text"></span>  
+                                <br>
+                            </div>
+                           
+                            <div class="row-crypto">
+                                <span class="json-span">Data:</span>
+                                <span id="crrow6" class="span-text"></span>
+                                <span class="json-span">Cena:</span>
+                                <span id="crprice6" class="span-text"></span>  
+                                <br>
+                            </div>
+
+                        </div>
+
+                        <!-- ŚRODEK -->
+                        <div id="tab-crypto-mid">
+
+                             <!-- DASH // RZĄD 7 - 8  -->
+                            <h5> DASH</h5>
+                            <div class="row-crypto">
+                                <span class="json-span">Data:</span>
+                                <span id="crrow7" class="span-text"></span>
+                                <span class="json-span">Cena:</span>
+                                <span id="crprice7" class="span-text"></span>  
+                                <br>
+                            </div>
+                            
+                            <div class="row-crypto">
+                                <span class="json-span">Data:</span>
+                                <span id="crrow8" class="span-text"></span>
+                                <span class="json-span">Cena:</span>
+                                <span id="crprice8" class="span-text"></span>  
+                                <br>
+                            </div>
+
+                             <!-- ZEC // RZĄD 9 - 10  -->
+                            <h5 class="h5margin"> ZEC</h5>
+                            <div class="row-crypto">
+                                <span class="json-span">Data:</span>
+                                <span id="crrow9" class="span-text"></span>
+                                <span class="json-span">Cena:</span>
+                                <span id="crprice9" class="span-text"></span>  
+                                <br>
+                            </div>
+
+                            <div class="row-crypto">
+                                <span class="json-span">Data:</span>
+                                <span id="crrow10" class="span-text"></span>
+                                <span class="json-span">Cena:</span>
+                                <span id="crprice10" class="span-text"></span>  
+                                <br>
+                            </div>
+
+                        </div>
+
+                        <!-- PRAWA -->
+                        <div id="tab-crypto-right">
+                            
+                            <!-- XMR // RZĄD 11 - 12  -->
+                            <h5> XMR</h5>
+                            <div class="row-crypto">
+                                <span class="json-span">Data:</span>
+                                <span id="crrow11" class="span-text"></span>
+                                <span class="json-span">Cena:</span>
+                                <span id="crprice11" class="span-text"></span>  
+                                <br>
+                            </div>
+
+                            <div class="row-crypto">
+                                <span class="json-span">Data:</span>
+                                <span id="crrow12" class="span-text"></span>
+                                <span class="json-span">Cena:</span>
+                                <span id="crprice12" class="span-text"></span>  
+                                <br>
+                            </div>
+
+                            <!-- XMR // RZĄD 13 - 14  -->
+                            <h5 class="h5margin"> LTC</h5>
+
+                            <div class="row-crypto">
+                                <span class="json-span">Data:</span>
+                                <span id="crrow13" class="span-text"></span>
+                                <span class="json-span">Cena:</span>
+                                <span id="crprice13" class="span-text"></span>  
+                                <br>
+                            </div>
+
+                            <div class="row-crypto">
+                                <span class="json-span">Data:</span>
+                                <span id="crrow14" class="span-text"></span>
+                                <span class="json-span">Cena:</span>
+                                <span id="crprice14" class="span-text"></span>  
+                                <br>
+                            </div>
+
+                            <!-- XMR // RZĄD 15 - 16  -->
+                            <h5 class="h5margin"> NEO</h5>
+                            <div class="row-crypto">
+                                <span class="json-span">Data:</span>
+                                <span id="crrow15" class="span-text"></span>
+                                <span class="json-span">Cena:</span>
+                                <span id="crprice15" class="span-text"></span>  
+                                <br>
+                            </div>
+                            
+                            <div class="row-crypto">
+                                <span class="json-span">Data:</span>
+                                <span id="crrow16" class="span-text"></span>
+                                <span class="json-span">Cena:</span>
+                                <span id="crprice16" class="span-text"></span>  
+                                <br>
+                            </div>
+
                         </div>
                     </div>
 
@@ -634,12 +810,15 @@
         <!-- <div class="div-inner-style flex-width"></div> -->
         
         <!-- <div class="div-inner-style flex-width"></div> -->
-
+        <footer>
+            
+        </footer>    
     </div>
 
     
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/buttons.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/buttons.js"></script>
 </body>
 </html>

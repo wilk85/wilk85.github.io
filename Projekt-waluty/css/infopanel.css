@@ -1,0 +1,18 @@
+#info-panel-container{
+    border: 1px solid rgb(195,195,195);
+    background-color: #dddddd86;
+    width: 88%;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 6px;
+    margin: 10px auto 0;
+}
+#info-panel-container .span-text{
+    font-family: 'Martel Sans', serif;
+    font-size: 0.66em;
+    font-weight: 300;
+}
+.l-out-g30 #info-panel-container{
+    margin: 8px auto 0;
+}
