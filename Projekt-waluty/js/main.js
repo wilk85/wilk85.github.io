@@ -1,9 +1,10 @@
 $(document).ready(function(){
 
+
     /* CENA ZŁOTA W GÓRNYM OKNIE --- SEKCJA LEWA GÓRA */
     $.getJSON('https://api.nbp.pl/api/cenyzlota', function(gold){
         $('#row0price').html(gold[0].cena);
-        
+
         //WYŚWIETLANIE DATY POD KONTENEREM Z CENAMI ZŁOTA
         $('#data-l-out-g30').html(gold[0].data);
     });
@@ -33,38 +34,26 @@ $(document).ready(function(){
 
     /* POBIERANIE WALUT ORAZ TOOLTIPÓW WCZORAJSZYCH KURSÓW --- SEKCJA ŚRODEK */
 
-    /* AKTUALNE KURSY WALUT */
-    function curr_val(curr_name, id){
-        $.getJSON('https://api.nbp.pl/api/exchangerates/rates/A/'+curr_name , function(data){
-            $('#'+id+'right').html(data.rates[0].mid.toFixed(3));
+    /* AKTUALNE KURSY WALUT i TOOLTIPY DO NICH */
+    
+    function curr_val(curr_name, id, day_nr){
+        $.getJSON('https://api.nbp.pl/api/exchangerates/rates/A/'+curr_name+ '/last/2/?format=json', function(data){
+            // console.log(data.rates);
+            $('#'+id+'right').html(data.rates[day_nr].mid.toFixed(3));
+            $('#tt-'+id).html(data.rates[day_nr-1].mid.toFixed(3));
         });
     };
 
-    curr_val('EUR', 1);
-    curr_val('USD', 2);
-    curr_val('GBP', 3);
-    curr_val('CHF', 4);
-    curr_val('CAD', 5);
-    curr_val('RUB', 6);
-    curr_val('CNY', 7);
-    curr_val('NOK', 8);
-
-    /* TOOLTIPY WCZORAJSZEGO KURS WALUT */
-    function curr_hist(curr_name, id){
-        $.getJSON('https://api.nbp.pl/api/exchangerates/rates/a/'+curr_name+ '/last/2/?format=json', function(data3){
-            // console.log(data3);
-            $('#tt-'+id).html(data3.rates[0].mid.toFixed(3));
-        });
-    };
-
-    curr_hist('eur', 1);
-    curr_hist('usd', 2);
-    curr_hist('gbp', 3);
-    curr_hist('chf', 4);
-    curr_hist('cad', 5);
-    curr_hist('rub', 6);
-    curr_hist('cny', 7);
-    curr_hist('nok', 8);
+    curr_val('EUR', 1, 1);
+    curr_val('USD', 2, 1);
+    curr_val('GBP', 3, 1);
+    curr_val('CHF', 4, 1);
+    curr_val('CAD', 5, 1);
+    curr_val('RUB', 6, 1);
+    curr_val('CNY', 7, 1);
+    curr_val('NOK', 8, 1);
+    /*  */
+  
 
     /* DATA POD WALUTAMI */
     $.getJSON('https://api.nbp.pl/api/exchangerates/rates/A/usd', function(data){
@@ -73,40 +62,27 @@ $(document).ready(function(){
     /*  */
     
 
-    /* POBIERANIE KRYPTOWALUT ORAZ TOOLTIPÓW WCZORAJSZYCH KURSÓW --- SEKCJA PRAWA*/
-    
-    /* AKTUALNE KURSY KRYPTOWALUT */
-    function crypt_val(crypt_name, id){
-        $.getJSON('https://min-api.cryptocompare.com/data/price?fsym=' +crypt_name+ '&tsyms=PLN', function(data){
-            $('#'+id).html(data.PLN.toFixed(2));
-        });
-    };
-
-    crypt_val('BTC', 'btc');
-    crypt_val('BCH', 'bch');
-    crypt_val('ETH', 'eth');
-    crypt_val('DASH', 'dash');
-    crypt_val('ZEC', 'zec');
-    crypt_val('XMR', 'xmr');
-    crypt_val('LTC', 'ltc');
-    crypt_val('NEO', 'neo');
-
     /* TOOLTIPY WCZORAJSZEGO KURSU KRYPTOWALUT */
-    function tooltip_crypto(cr_name, id){
-        $.getJSON('https://min-api.cryptocompare.com/data/histoday?fsym='+cr_name+'&tsym=PLN&limit=3', function(data){
-            // console.log(data.Data[2].close);
-            $('#tt-'+id).html(data.Data[2].close.toFixed(2));
+    function tooltip_crypto(cr_name, id, id2, day_nr){
+        $.getJSON('https://min-api.cryptocompare.com/data/histoday?fsym='+cr_name+'&tsym=PLN&limit=1', function(data){
+            // console.log(data.Data);
+            
+            // console.log(new Date(data.Data[0].time*1000).toLocaleDateString('sv-SE')); // wczoraj
+            // console.log(new Date(data.Data[1].time*1000).toLocaleDateString('sv-SE')); // dzisiaj
+            
+            $('#'+id).html(data.Data[day_nr].close.toFixed(2));
+            $('#tt-'+id2).html(data.Data[day_nr-1].close.toFixed(2));
         });
     };
     
-    tooltip_crypto('BTC', 11);
-    tooltip_crypto('BCH', 12);
-    tooltip_crypto('ETH', 13);
-    tooltip_crypto('DASH', 14);
-    tooltip_crypto('ZEC', 15);
-    tooltip_crypto('XMR', 16);
-    tooltip_crypto('LTC', 17);
-    tooltip_crypto('NEO', 18);
+    tooltip_crypto('BTC', 'btc', 11, 1);
+    tooltip_crypto('BCH', 'bch', 12, 1);
+    tooltip_crypto('ETH', 'eth', 13, 1);
+    tooltip_crypto('DASH', 'dash', 14, 1);
+    tooltip_crypto('ZEC', 'zec', 15, 1);
+    tooltip_crypto('XMR', 'xmr', 16, 1);
+    tooltip_crypto('LTC', 'ltc', 17, 1);
+    tooltip_crypto('NEO', 'neo', 18, 1);
 
     /* DATA POD KRYPTOWALUTAMI */
     $.getJSON('https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=PLN&limit=3', function(data){
@@ -149,10 +125,9 @@ $(document).ready(function(){
  
     /* WYŚWIETLANIE DATY W TABIE OSTATNIE NOTOW. KRYPTO */
     $.getJSON('https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=PLN&limit=3', function(data8){
-        function data_yester(day_nr, i, ){    // od 0-1
+        function data_yester(day_nr, i){    // od 0-1
             // console.log(new Date(data8.Data[day_nr].time*1000).toLocaleDateString('sv-SE'));
             var dataY = new Date(data8.Data[day_nr].time*1000).toLocaleDateString('sv-SE');
-            
             
             for(i=i; i<17; i++){
                 $('#crrow'+i++).html(dataY);
