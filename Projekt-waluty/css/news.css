@@ -93,8 +93,8 @@
 }
 
 /* taby pojedynczo */
-#tab-inner-container .tab-currency, 
-#tab-inner-container .tab-crypto{
+#tab-inner-container .tab-currency{
+
     display: none;
     margin: 0;
     padding: 0;

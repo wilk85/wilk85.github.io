@@ -1,5 +1,13 @@
 $(document).ready(function(){
 
+    /* CENA ZŁOTA W GÓRNYM OKNIE --- SEKCJA LEWA GÓRA */
+    $.getJSON('https://api.nbp.pl/api/cenyzlota', function(gold){
+        $('#row0price').html(gold[0].cena);
+        
+        //WYŚWIETLANIE DATY POD KONTENEREM Z CENAMI ZŁOTA
+        $('#data-l-out-g30').html(gold[0].data);
+    });
+
     /* POBIERANIE KURSÓW ZŁOTA --- SEKCJA LEWA */
     /* KURSY ZŁOTA */
     function goldPrice(id, nr){
@@ -19,10 +27,7 @@ $(document).ready(function(){
     goldPrice(8, 29);
 
     /* DATA POD ZŁOTEM */
-    $.getJSON('http://api.nbp.pl/api/cenyzlota', function(gold){
-        $('#row0price').html(gold[0].cena);
-        $('#data-l-out-g30').html(gold[0].data);
-    });
+    
     /*  */
 
 
@@ -108,35 +113,8 @@ $(document).ready(function(){
         $('#data-currency').html(new Date(data.TimeTo*1000).toLocaleDateString('sv-SE'));
     });
     /*  */
-
-
-        // $.getJSON('https://min-api.cryptocompare.com/data/histoday?fsym='+cr_name+ '&tsym=PLN&limit=3', function(data5){
-
-        //     // console.log(data5.Data);
-        //     //zwraca datę - potrzebne do tab krypto notowania
-        //     // function data_day(day_nr){
-        //     //     var fullDate = new Date(data5.Data[day_nr].time*1000).toLocaleDateString("sv-SE");
-        //     //     console.log(fullDate);
-        //     //     return fullDate;
-        //     // };
-        //     // data_day(3);//dzis
-            
-        //     function price_day(price_nr){
-        //         var fullPrice = data5.Data[price_nr].close.toFixed(2);
-        //         console.log(fullPrice);
-        //         return fullPrice;  
-        //     };
-
-        //     function tooltip_price(id){
-        //         $('#tt-'+id).html(price_day(2));
-        //     };
-            
-        //     //wrzucanie tooltipów do kryptowalut
-        //     tooltip_price('11');
-        //     // $('#tt-11').html(price_day(2));
-        // });
-    
    
+
     /* DOLNA SEKCJA / plik NEWS.CSS ------ DANE DLA TABÓW */
 
     /* ZŁOTO */
@@ -185,6 +163,7 @@ $(document).ready(function(){
         data_yester(1, 2);
     });
 
+    /* WYŚWIETLANIE CENY W TABIE OSTATNIE NOTOW. KRYPTO  */
     function crypt_price_show(cry_name, day_nr, row_id){ // cry_name - dużymi liteami
         $.getJSON('https://min-api.cryptocompare.com/data/histoday?fsym='+cry_name+'&tsym=PLN&limit=3', function(data9){
             // console.log(data9.Data[day_nr].close);
@@ -212,28 +191,9 @@ $(document).ready(function(){
     crypt_price_show('LTC', 1, '14');
     crypt_price_show('NEO', 0, '15');
     crypt_price_show('NEO', 1, '16');
-        // for(var i=1; i<15; i+2){
-        //     console.log(i);
-        // }
-
-    /*  */
-
-
-        // console.log(data.Data[2].close);
-
-        // function data_day(day_nr){
-        //     var fullDate = new Date(data5.Data[day_nr].time*1000).toLocaleDateString("sv-SE");
-        //     console.log(fullDate);
-        //     return fullDate;
-        // };
-        // data_day(3);//dzis
-  
-
-    // data_day(2);
-    // console.log(new Date(1537056000*1000).toLocaleDateString());
+       
 
     // setInterval(goldData, 10*(6*360000));
-    
     
     //obliczenie sekund
     //21600 sekund = 6g
