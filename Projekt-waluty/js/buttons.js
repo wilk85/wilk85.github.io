@@ -14,7 +14,13 @@ $(document).ready(function(){
         $('#tab-gold').css('display', 'flex');
         $('#tab-currency').css('display', 'none');
         $('#tab-crypto').css('display', 'none'); 
-    });   
+    });  
+    $('#button-3').on('click', function(){
+        $('#tab-news').css('display', 'none');
+        $('#tab-gold').css('display', 'none');
+        $('#tab-currency').css('display', 'flex');
+        $('#tab-crypto').css('display', 'none'); 
+    });    
     $('#button-4').on('click', function(){
         $('#tab-news').css('display', 'none');
         $('#tab-gold').css('display', 'none');

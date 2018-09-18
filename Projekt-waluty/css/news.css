@@ -2,8 +2,10 @@
 @import url('https://fonts.googleapis.com/css?family=Exo+2:200,300,400,600|Exo:200,300,400,600|Martel+Sans:200,300,400,600|Source+Sans+Pro:200,300,400,600|Titillium+Web:200,300,400,600|Ubuntu:300,400,500,700&subset=latin-ext');
 
 #news{
-    margin-top: 10px;
-    align-items: center;   
+    /* margin-top: 10px; */
+    /* align-items: center; */
+    display: flex;
+    flex: 1;
 }
 #news .news-inner{
     width: 55%;
@@ -19,7 +21,8 @@
     text-align: center;
 }
 #news .news-inner p{
-    padding: 6px;
+    /* padding: 6px; */
+
 }
 #news .p-data{
     font-family: Arial, Helvetica, sans-serif;
@@ -49,11 +52,13 @@
 #tab-container {
     display: flex;
     justify-content: flex-start;
-    width: 70%;
+    /* width: 70%; */
     cursor: pointer;
-    font-size: 0.6em;
+    font-size: 0.58em;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
+    /* flex: 1; */
+    /* flex-direction: column; */
 }
 #tab-container .button-container{
     display: flex;
@@ -61,7 +66,8 @@
     padding: 0;
     text-decoration: none;
     list-style-type: none;
-    text-align: center;
+    /* text-align: center; */
+
 }
 #tab-container .button-container li:first-child{
     border-top-left-radius: 6px;
@@ -74,6 +80,7 @@
     padding: 4px 8px;
     width: 35%;
     margin: 0 3px 0 0 ;
+    justify-content: center;
 }
 #tab-container .button-container li:hover{
     background-color: #333;
@@ -90,49 +97,64 @@
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     padding: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
 }
+
 
 /* taby pojedynczo */
 #tab-inner-container .tab-currency{
-
     display: none;
     margin: 0;
     padding: 0;
+}
+#tab-inner-container .tab h5{
+    margin: 0;
+    padding: 0;
+    font-size: 0.76em;
+}
+/* taby */
+#tab-inner-container .tab-gold,
+#tab-inner-container .tab-currency,
+#tab-inner-container .tab-crypto{
+    display: flex;
+    justify-content: space-evenly;
+    display: none;
+    margin: 0 auto;
 }
 
 /* tab news */
 #tab-inner-container .tab-news{
     /* display: none; */
 }
-
-/* tab złoto */
-#tab-inner-container #tab-gold{
-    display: flex;
-    justify-content: space-evenly;
-    display: none;
+/* CENTROWANIE H5 ORAZ USTAWIANIE GO WYZEJ  */
+#tab-inner-container .tab-gold{
+    flex-wrap: wrap;
 }
+#tab-inner-container .tab-gold-mid{
+    flex-basis: 100%;
+    justify-items: center;
+}
+#tab-inner-container .tab-gold-left,
+#tab-inner-container .tab-gold-right{
+    padding:2px;
+}
+
+
+#tab-inner-container .tab-currency-mid,
+#tab-inner-container #tab-crypto-mid{
+    margin: 0 10px;
+}
+/*  */
 #tab-inner-container .tab-gold .span-text{
     line-height: 1.1;
     font-family: 'Martel Sans', serif;
     font-weight: 300;
     font-size: 0.66em;
 }
-
-
-/* tab waluta */
-
-/* tab Krypto */
-#tab-inner-container .tab-crypto{
-    display: flex;
-    justify-content: space-evenly;
-    display: none;
-}
-#tab-inner-container .tab-crypto h5{
-    margin: 0;
-    padding: 0;
-    font-size: 0.76em;
-}
-#tab-inner-container .tab-crypto h5.h5margin{
+#tab-inner-container .tab-crypto h5,
+#tab-inner-container .tab-currency h5{
     margin-top: 10px;
 }
 #tab-inner-container .tab span.span-text{

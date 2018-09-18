@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-
     /* CENA ZŁOTA W GÓRNYM OKNIE --- SEKCJA LEWA GÓRA */
     $.getJSON('https://api.nbp.pl/api/cenyzlota', function(gold){
         $('#row0price').html(gold[0].cena);
@@ -33,25 +32,25 @@ $(document).ready(function(){
 
 
     /* POBIERANIE WALUT ORAZ TOOLTIPÓW WCZORAJSZYCH KURSÓW --- SEKCJA ŚRODEK */
-
     /* AKTUALNE KURSY WALUT i TOOLTIPY DO NICH */
-    
-    function curr_val(curr_name, id, day_nr){
-        $.getJSON('https://api.nbp.pl/api/exchangerates/rates/A/'+curr_name+ '/last/2/?format=json', function(data){
-            // console.log(data.rates);
-            $('#'+id+'right').html(data.rates[day_nr].mid.toFixed(3));
-            $('#tt-'+id).html(data.rates[day_nr-1].mid.toFixed(3));
+    /* STARSZE DANE KURSÓW WALUT --- SEKCJA NEWS */
+    function curr_val(curr_name, id, id2, id3, day_nr){
+        $.getJSON('https://api.nbp.pl/api/exchangerates/rates/A/'+curr_name+'/last/4/?format=json', function(data11){
+            $('#'+id+'right').html(data11.rates[day_nr].mid.toFixed(3));
+            $('#tt-'+id).html(data11.rates[day_nr-1].mid.toFixed(3));
+            $('#walprice'+id2).html(data11.rates[day_nr-2].mid.toFixed(3));
+            $('#walprice'+id3).html(data11.rates[day_nr-3].mid.toFixed(3));
         });
     };
-
-    curr_val('EUR', 1, 1);
-    curr_val('USD', 2, 1);
-    curr_val('GBP', 3, 1);
-    curr_val('CHF', 4, 1);
-    curr_val('CAD', 5, 1);
-    curr_val('RUB', 6, 1);
-    curr_val('CNY', 7, 1);
-    curr_val('NOK', 8, 1);
+            //name  i1 i2 i3 day
+    curr_val('EUR', 1, 2, 1, 3);
+    curr_val('USD', 2, 4, 3, 3);
+    curr_val('GBP', 3, 6, 5, 3);
+    curr_val('CHF', 4, 8, 7, 3);
+    curr_val('CAD', 5, 10, 9, 3);
+    curr_val('RUB', 6, 12, 11, 3);
+    curr_val('CNY', 7, 14, 13, 3);
+    curr_val('NOK', 8, 16, 15, 3);
     /*  */
   
 
@@ -64,6 +63,7 @@ $(document).ready(function(){
 
     /* TOOLTIPY WCZORAJSZEGO KURSU KRYPTOWALUT */
     /* WYŚWIETLANIE CENY W TABIE OSTATNIE NOTOW. KRYPTO  */
+    /* STARSZE DANE KRYPTO --- SEKCJA NEWS */
     function crypto_val_tooltip(cr_name, id, id2, id3, id4, day_nr){
         $.getJSON('https://min-api.cryptocompare.com/data/histoday?fsym='+cr_name+'&tsym=PLN&limit=3', function(data){
             // console.log(data.Data);
@@ -106,42 +106,41 @@ $(document).ready(function(){
     /* DOLNA SEKCJA / plik NEWS.CSS ------ DANE DLA TABÓW */
 
     /* ZŁOTO */
-    function tab_gold(id){
+    function tab_gold(){
         $.getJSON('https://api.nbp.pl/api/cenyzlota/last/28', function(data){
-                $('#ghrow'+id).html(data[id-1].data);
-                $('#ghprice'+id).html(data[id-1].cena.toFixed(2));
-           
+                
+                for(var id=1; id<21; id++){
+                    $('#ghrow'+id).html(data[id-1].data);
+                    $('#ghprice'+id).html(data[id-1].cena.toFixed(2));
+                    // console.log(id);
+                }
             });  
         };
     
-    tab_gold('1');
-    tab_gold('2');
-    tab_gold('3');
-    tab_gold('4');
-    tab_gold('5');
-    tab_gold('6');
-    tab_gold('7');
-    tab_gold('8');
-    tab_gold('9');
-    tab_gold('10');
-    tab_gold('11');
-    tab_gold('12');
-    tab_gold('13');
-    tab_gold('14');
-    tab_gold('15');
-    tab_gold('16');
-    tab_gold('17');
-    tab_gold('18');
-    tab_gold('19');
-    tab_gold('20');
+    tab_gold();
+   
  
+    /* WYŚWIETLANIE DATY W TABIE OSTATNIE NOTOW. WALUT */
+    $.getJSON('https://api.nbp.pl/api/exchangerates/rates/A/USD/last/4/?format=json', function(data10){
+        function data_curr_yester(day_nr, i){
+            // console.log(data10.rates[day_nr].effectiveDate);
+                for(var i=i; i<17; i++){
+                    $('#walrow'+i++).html(data10.rates[day_nr].effectiveDate);
+                };
+            };
+
+            data_curr_yester(0, 1);
+            data_curr_yester(1, 2);
+        });
+    
+
     /* WYŚWIETLANIE DATY W TABIE OSTATNIE NOTOW. KRYPTO */
     $.getJSON('https://min-api.cryptocompare.com/data/histoday?fsym=BTC&tsym=PLN&limit=3', function(data8){
         function data_yester(day_nr, i){    // od 0-1
             // console.log(new Date(data8.Data[day_nr].time*1000).toLocaleDateString('sv-SE'));
             var dataY = new Date(data8.Data[day_nr].time*1000).toLocaleDateString('sv-SE');
             
-            for(i=i; i<17; i++){
+            for(var i=i; i<17; i++){
                 $('#crrow'+i++).html(dataY);
             };
         };
@@ -149,8 +148,7 @@ $(document).ready(function(){
         data_yester(0, 1);
         data_yester(1, 2);
     });
-
-
+    
     // setInterval(goldData, 10*(6*360000));
     
     //obliczenie sekund

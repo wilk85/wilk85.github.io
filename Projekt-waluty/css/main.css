@@ -6,7 +6,7 @@
 @import "./buttons-q-marks.css";
 @import "./footer.css";
 @import "./infopanel.css";
-
+@import "./media-query.css";
 
 /* font-family: 'Dosis', sans-serif;
 font-family: 'Uncial Antiqua', cursive;
@@ -14,8 +14,6 @@ font-family: 'Boogaloo', cursive;
 font-family: 'Karla', sans-serif;
 font-family: 'Mukta', sans-serif;
 font-family: 'Biryani', sans-serif;
-
-
 */
 
 body, html{
@@ -26,20 +24,9 @@ body, html{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    height: 100%;
     box-sizing: border-box;
     font-size: 20px;
-    height: 100vh;
-    /* background-color: #333; */
-    /* color: #bdbaba;
-    height: 30vh; */
-    /* background-color: #333; */
-    /* background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('world-map.jpg'); */
-   
-    /* background-image: linear-gradient(-75deg, rgba(0,0,0,0.6), rgba(77,0,0,0.4))5 */
-
-    /* background-image: linear-gradient(45deg, rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('enter.jpg'); */
-    /* background-position: center;
-    background-size: cover; */
 }
 div h3, h3{
     font-size: 0.78em;
@@ -69,8 +56,6 @@ span{
 }
 
 
-
-/*  */
 /* GŁÓWNE STYLE DIVÓW */
 .container-flex{
     display: flex;
@@ -80,16 +65,19 @@ span{
     justify-items: center;
     padding: 10px 0;
     max-width: 1200px;
+    min-width: 400px;
     margin: 0 auto; 
+    
 }
 .left, .mid, .news, .currency{
-    padding: 8px 8px 4px;
+    padding: 8px;
     color: #f2f2f2;
     text-align: center;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     flex: 1;
+    margin: 2px;
 }
 .flex-width{
     flex-basis: 30%;
@@ -138,13 +126,9 @@ span{
 
 
 /* lewy div */
-
 .l-out .l-out-text span.span-text{
     font-size: 0.72em;
 }
-/* .l-out hr{
-    margin: 2px auto;
-} */
 .l-out-text{
     padding: 0;
     margin-bottom: 6px;
@@ -173,12 +157,7 @@ span{
 }
 .gold-data span.span-text{
     font-family: 'Martel Sans', serif;
-    /* font-family: 'Biryani', sans-serif; */
-    /* font-family: 'Karla', sans-serif; */
     font-weight: 300;
-    font-size: 0.66em;    
+    font-size: 0.66em;
 }
-
 /*  koniec lewego diva */
-/*  */
-

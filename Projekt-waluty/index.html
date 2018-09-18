@@ -16,7 +16,7 @@
 <body>
 
     
-    <div class="container-flex">
+    <div id="container-flex" class="container-flex">
 
 <!-- banner.css -->
         <!-- <div id="banner" class="banner"> 
@@ -295,7 +295,7 @@
         
 
 <!-- kryptowaluty -->
-        <div class="currency flex-width">
+        <div id="currency" class="currency flex-width">
 
             <div id="currency-inner" class="currency-inner div-inner-style">
                 <h3>Aktualne kursy kryptowalut</h3>
@@ -476,13 +476,15 @@
                             <p class="news-area">W tym tygodniu polski złoty umacnia się minimalnie względem euro z poziomu 4,28 do poziomów 4,2650-4,2750. USDPLN na zakończenie poniedziałkowej sesji zamknął się na poziomie 3,6548 i to zmieniło trend na dziennym wykresie Ichimoku na spadkowy, a także wygenerowało sygnał do sprzedaży. <br><br>
                             Niechęć do ryzyka spowodowana turecką lirą, a także zjawisko „zarażenia” w odniesieniu do rynków wschodzących, osłabiły polskiego złotego odpowiednio 2,3% i 5,2% względem euro oraz dolara z początkiem sierpnia. Polski złoty oraz Giełda Papierów Wartościowych w Warszawie są zazwyczaj dość wrażliwe na rozwój sytuacji na rynkach wschodzących.
                             </p>
-        
-                            / zrobić tutaj przycisk do powiększania artykułu, lub przewijanie stron /
                         </article>
                     </div>
 
                     <div id="tab-gold" class="tab tab-gold">
-                        <!-- <div id="gold-history" class="history"></div> -->
+                        <div class="tab-gold-mid">
+                            <h5>Ceny złota z 30 dni </h5>
+                        </div>
+                        
+                        
                         <div class="tab-gold-left">
                             <!-- 1 -->
                             <span class="json-span">Data:</span>
@@ -555,6 +557,7 @@
                             <span id="ghprice10" class="span-text"></span>  
                             <br>
                         </div>
+                        
                         <div class="tab-gold-right">
                             <!-- 11 -->
                             <span class="json-span">Data:</span>
@@ -630,6 +633,161 @@
                     </div>
 
                     <div id="tab-currency" class="tab tab-currency">
+                        <!-- LEWA -->
+                        <div id="tab-crypto-left">
+
+                            <!-- EUR // RZĄD 1 - 2  -->
+                            <h5> EUR</h5>
+                            <div class="row-crypto">
+                                <span class="json-span">Data:</span>
+                                <span id="walrow1" class="span-text"></span>
+                                <span class="json-span">Cena:</span>
+                                <span id="walprice1" class="span-text"></span>  
+                                <br>
+                            </div>
+                            
+                            <div class="row-crypto">
+                                <span class="json-span">Data:</span>
+                                <span id="walrow2" class="span-text"></span>
+                                <span class="json-span">Cena:</span>
+                                <span id="walprice2" class="span-text"></span>  
+                                <br>
+                            </div>
+
+                            <!-- USD // RZĄD 3 - 4  -->
+                            <h5> USD</h5>
+                            <div class="row-crypto">
+                                <span class="json-span">Data:</span>
+                                <span id="walrow3" class="span-text"></span>
+                                <span class="json-span">Cena:</span>
+                                <span id="walprice3" class="span-text"></span>  
+                                <br>
+                            </div>
+                            
+                            <div class="row-crypto">
+                                <span class="json-span">Data:</span>
+                                <span id="walrow4" class="span-text"></span>
+                                <span class="json-span">Cena:</span>
+                                <span id="walprice4" class="span-text"></span>  
+                                <br>
+                            </div>
+
+                            <!-- BGP // RZĄD 5 - 6  -->
+                            <h5> GBP</h5>
+                            <div class="row-crypto">
+                                <span class="json-span">Data:</span>
+                                <span id="walrow5" class="span-text"></span>
+                                <span class="json-span">Cena:</span>
+                                <span id="walprice5" class="span-text"></span>  
+                                <br>
+                            </div>
+                            
+                            <div class="row-crypto">
+                                <span class="json-span">Data:</span>
+                                <span id="walrow6" class="span-text"></span>
+                                <span class="json-span">Cena:</span>
+                                <span id="walprice6" class="span-text"></span>  
+                                <br>
+                            </div>
+
+                        </div>
+
+                        <div class="tab-currency-mid">
+
+                            <!-- CHF // RZĄD 7 - 8  -->
+                            <h5> CHF</h5>
+                            <div class="row-crypto">
+                                <span class="json-span">Data:</span>
+                                <span id="walrow7" class="span-text"></span>
+                                <span class="json-span">Cena:</span>
+                                <span id="walprice7" class="span-text"></span>  
+                                <br>
+                            </div>
+                            
+                            <div class="row-crypto">
+                                <span class="json-span">Data:</span>
+                                <span id="walrow8" class="span-text"></span>
+                                <span class="json-span">Cena:</span>
+                                <span id="walprice8" class="span-text"></span>  
+                                <br>
+                            </div>
+
+                            <!-- CAD // RZĄD 9 - 10  -->
+                            <h5> CAD</h5>
+                            <div class="row-crypto">
+                                <span class="json-span">Data:</span>
+                                <span id="walrow9" class="span-text"></span>
+                                <span class="json-span">Cena:</span>
+                                <span id="walprice9" class="span-text"></span>  
+                                <br>
+                            </div>
+                            
+                            <div class="row-crypto">
+                                <span class="json-span">Data:</span>
+                                <span id="walrow10" class="span-text"></span>
+                                <span class="json-span">Cena:</span>
+                                <span id="walprice10" class="span-text"></span>  
+                                <br>
+                            </div>
+
+                        </div>
+                        <div class="tab-currency-right">
+
+                            <!-- RUB // RZĄD 11 - 12  -->
+                            <h5> RUB</h5>
+                            <div class="row-crypto">
+                                <span class="json-span">Data:</span>
+                                <span id="walrow11" class="span-text"></span>
+                                <span class="json-span">Cena:</span>
+                                <span id="walprice11" class="span-text"></span>  
+                                <br>
+                            </div>
+                            
+                            <div class="row-crypto">
+                                <span class="json-span">Data:</span>
+                                <span id="walrow12" class="span-text"></span>
+                                <span class="json-span">Cena:</span>
+                                <span id="walprice12" class="span-text"></span>  
+                                <br>
+                            </div>
+
+                            <!-- CNY // RZĄD 13 - 14 -->
+                            <h5> CNY</h5>
+                            <div class="row-crypto">
+                                <span class="json-span">Data:</span>
+                                <span id="walrow13" class="span-text"></span>
+                                <span class="json-span">Cena:</span>
+                                <span id="walprice13" class="span-text"></span>  
+                                <br>
+                            </div>
+                            
+                            <div class="row-crypto">
+                                <span class="json-span">Data:</span>
+                                <span id="walrow14" class="span-text"></span>
+                                <span class="json-span">Cena:</span>
+                                <span id="walprice14" class="span-text"></span>  
+                                <br>
+                            </div>
+                            
+                            <!-- NOK // RZĄD 15 - 16  -->
+                            <h5> NOK</h5>
+                            <div class="row-crypto">
+                                <span class="json-span">Data:</span>
+                                <span id="walrow15" class="span-text"></span>
+                                <span class="json-span">Cena:</span>
+                                <span id="walprice15" class="span-text"></span>  
+                                <br>
+                            </div>
+                            
+                            <div class="row-crypto">
+                                <span class="json-span">Data:</span>
+                                <span id="walrow16" class="span-text"></span>
+                                <span class="json-span">Cena:</span>
+                                <span id="walprice16" class="span-text"></span>  
+                                <br>
+                            </div>
+
+                        </div>
 
                     </div>
 
@@ -796,8 +954,9 @@
 
                         </div>
                     </div>
-
-                 </div>
+                
+                </div>
+                 
 
             </div>
             
@@ -807,9 +966,7 @@
         <!-- <div class="div-inner-style flex-width"></div> -->
         
         <!-- <div class="div-inner-style flex-width"></div> -->
-        <footer>
-            
-        </footer>    
+          
     </div>
 
     
