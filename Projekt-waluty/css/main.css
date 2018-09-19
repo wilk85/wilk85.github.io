@@ -63,7 +63,7 @@ span{
     flex-wrap: wrap;
     justify-content: center;
     justify-items: center;
-    padding: 10px 0;
+    /* padding: 10px 0; */
     max-width: 1200px;
     min-width: 400px;
     margin: 0 auto; 
