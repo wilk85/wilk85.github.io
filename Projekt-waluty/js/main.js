@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+
     /* CENA ZŁOTA W GÓRNYM OKNIE --- SEKCJA LEWA GÓRA */
     $.getJSON('https://api.nbp.pl/api/cenyzlota', function(gold){
         $('#row0price').html(gold[0].cena);

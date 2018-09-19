@@ -122,7 +122,10 @@
 
 /* tab news */
 #tab-inner-container .tab-news{
-    /* display: none; */
+    display: none;
+}
+#tab-inner-container .tab-gold{
+    display: flex;
 }
 /* CENTROWANIE H5 ORAZ USTAWIANIE GO WYZEJ  */
 #tab-inner-container .tab-gold{

@@ -3,12 +3,12 @@
 // }
 
 $(document).ready(function(){
-    $('#button-1').on('click', function(){
-        $('#tab-news').css('display', 'block');
-        $('#tab-gold').css('display', 'none');
-        $('#tab-currency').css('display', 'none');
-        $('#tab-crypto').css('display', 'none');
-    });
+    // $('#button-1').on('click', function(){
+    //     $('#tab-news').css('display', 'block');
+    //     $('#tab-gold').css('display', 'none');
+    //     $('#tab-currency').css('display', 'none');
+    //     $('#tab-crypto').css('display', 'none');
+    // });
     $('#button-2').on('click', function(){
         $('#tab-news').css('display', 'none');
         $('#tab-gold').css('display', 'flex');

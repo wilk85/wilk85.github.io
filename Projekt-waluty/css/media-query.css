@@ -37,11 +37,15 @@
     #tab-container{
         width: 100%;
     }
+    .currency .currency-inner{
+        flex: 0;
+    }
 }
 @media all and (min-width: 401px) and (max-width: 699px){
     #container-flex{
         max-width: 400px;
     }
+    
 }
 
 @media all and (max-width: 400px){
