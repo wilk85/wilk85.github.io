@@ -1,0 +1,60 @@
+#container-info{
+    padding: 6px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+}
+#container-info span{
+    font-size: 0.72em;
+    font-weight: 300;   
+    margin: 0 2px;
+}
+#temp-curr, #temp-info, #temp-wind,
+#app-temp, #pressure, #sunset, #sunrise{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#temp-info, #temp-wind{
+    padding-top: 11px;
+}
+#city{
+    width: 100%;
+}
+#temp-curr{
+    width: 25%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#temp-curr span{
+    font-size: 1.6em;
+    font-weight: 300;
+}
+#temp-info{
+    width: 35%;
+    /* background-color: white; */
+    /* color: black; */
+}
+#temp-wind{
+    width: 38%;
+    /* background-color: red; */
+}
+
+
+#app-temp, #sunrise{
+    width: 45%;
+    height: 40px;
+    padding-left: 8px;
+    /* background-color: teal; */
+    justify-content: flex-start;
+}
+#sunset, #pressure{
+    width: 50%;
+    justify-content: flex-end;
+    /* padding-left: 25px; */
+    /* padding-right: 2px; */
+    /* background-color: brown; */
+}

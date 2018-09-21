@@ -1,6 +1,6 @@
-@import './box-container.css';
+@import './container-weather.css';
 @import './container-events.css';
-@import './pick-background.css';
+@import './container-box-background.css';
 
 :root{
     --box_color: rgba(85, 85, 85, 0.65);
@@ -25,20 +25,28 @@ body, html{
     font-family: 'Mitr', sans-serif;
     font-weight: 200;
 }
-#box-background{
+#container-box-background{
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 30%;
+    margin: 10px ;
+    padding: 4px 8px;
     /* margin: 0 auto; */
 }
 #container-events{
     display: flex;
     /* background-color: black; */
     height: 120px;
-    width: 60%;
-    /* margin: 0 auto; */
+    width: 30%;
+    margin: 10px;
+    padding: 4px 8px;
 }
-
+#container-weather{
+    width: 28%;
+    background-color: black;
+    margin: 10px;
+    padding: 4px 8px;
+}
 
 
 /* klasy dla js */
