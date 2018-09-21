@@ -1,0 +1,35 @@
+.box-container{
+    display: flex;
+    height: 40px;
+    width: 230px;
+    background-color: var(--box_color);
+    border: var(--box_border);
+    /* border-top: 0; */
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2px 5px;
+    margin-top: 4px;
+    /* display: none; */
+    visibility: hidden;
+}
+.boxx{
+    height: 20px;
+    width: 20px;
+    font-family: 'Mitr', sans-serif;
+    font-weight: 300;
+    border: 2px solid #aaa;
+    border-radius: 2px;
+    font-size: 0.64em;
+    text-align: center;
+    line-height: 20px;
+    /* background-color: rgba(85, 85, 85, 0.7); */
+    background-color: rgba(68, 68, 68, 0.7);
+    /* background-color: rgba(34, 34, 34, 0.6); */
+    cursor: pointer;
+    margin: 0 2px;
+}
+
+.none{
+    /* display: none; */
+    visibility: hidden;
+}

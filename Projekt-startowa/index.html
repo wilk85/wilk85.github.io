@@ -5,33 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Martel+Sans:200,300,400,600,700,800|Mitr:200,300,400,500,600,700&amp;subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    
 
-    <div class="container">
+    <div id="container-flex" class="container-flex">
 
-        <div id="username-div" class="username">
-            <!-- <label for="input1" placeholder="Podaj swoje imię" >Podaj swoje imię: </label> -->
-            <input id="input1" type="text" placeholder="Podaj swoje imię">
-            <input id="submit1" type="submit" value="Przeslij">
+        <div id="box-background">
+            <div class="" id="pick-background">
+                <span>Kliknij żeby wybrać tło</span>  
+                <i id='arrowr' class="fas fa-angle-double-right"></i>
+            </div>
+
+            <div id='box-container' class="box-container">
+                <div id="box-1" class="box-1 boxx">1</div>
+                <div id="box-2" class="box-2 boxx">2</div>
+                <div id="box-3" class="box-3 boxx">3</div>
+                <div id="box-4" class="box-4 boxx">4</div>
+                <div id="box-5" class="box-5 boxx">5</div>
+                <div id="box-6" class="box-6 boxx">6</div>
+                <div id="box-7" class="box-7 boxx">7</div>
+                <div id="box-8" class="box-8 boxx">8</div>
+            </div>
         </div>
-           
 
-        <div class="message">
-            <span class="msg-left">Hello, </span> 
-            <span id="msg-right" class="msg-right">there </span>
+        <div id="container-events" class="container-events">
+            <div id="container-message" class="container-message">
+                <div id="username-div" class="username">
+                    <input id="input1" type="text" placeholder="Podaj swoje imię">
+                    <input id="submit1" type="submit" value="Przeslij">
+                </div>
+                
+                <div id="message" class="message">
+                    <span class="msg-left">Witaj, </span> 
+                    <span id="msg-right" class="msg-right">imię </span>
+                </div>
+            </div>
+
+            <div class="clock"></div>
+            <div class="date"></div>
         </div>
-        <div class="clock"></div>
-        <div class="date"></div>
 
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="js/main.js"></script>
-    
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="js/main.js"></script>
+    </div>
 </body>
 </html>
