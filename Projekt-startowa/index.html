@@ -17,8 +17,11 @@
 
         <div id="container-box-background">
             <div id="pick-background">
-                <span>Kliknij żeby wybrać tło</span>  
+              
+                <span id="text">Kliknij żeby wybrać tło</span> 
+                
                 <i id='arrowr' class="fas fa-angle-double-right"></i>
+                <!-- <i id='exit' class="fas fa-times"></i> -->
             </div>
 
             <div id='box-container' class="box-container none">
@@ -50,35 +53,54 @@
         <div id="container-weather" class="container-weather">
 
             <div id="container-info">
-                <div id="city">Kraków</div>
-                <div id="temp-curr">
-                     <span id="temp">16</span><span>&deg;</span>
+                <div id="top">
+                    <div id="city">Kraków</div>
+                    <div id="temp-curr">
+                        <span id="temp">16.2</span><span>&deg;</span>
+                    </div>
+                    <div id="temp-info"> 
+                        <span id="desc"> Przelotne opady </span> 
+                    </div>
                 </div>
-                <div id="temp-info"> 
-                    <span id="desc"> przelotne opady </span> 
+                
+
+                <div id="mid">
+                    <div id="app-temp">
+                        <span>Odczuw. temp:</span>
+                        <span id="app">19</span><span>&deg;</span>
+                    </div>
+                    <div id="temp-wind">
+                        <span>Wiatr:</span>
+                        <span id="wspd">17.1</span> 
+                        <span>km/h</span>
+                    </div>
                 </div>
-                <div id="temp-wind">
-                    <span>Wiatr:</span>
-                    <span id="wspd">17.1</span> 
-                    <span>km/h</span>
+
+                <div id="mid2">
+                    <div id="pressure">
+                        <span>Ciśnienie:</span>
+                        <span id="pre">100</span>
+                        <span>HPA</span>
+                    </div>
+                    <div id="visib">
+                        <span>Widoczność:</span>
+                        <span id="vis">13km</span>
+                    </div>
                 </div>
-                <div id="app-temp">
-                    <span>Odczuwalna temp</span>
-                    <span id="app">19</span><span>&deg;</span>
-                </div>
-                <div id="pressure">
-                    <span>Ciśnienie:</span>
-                    <span id="pre">100</span>
-                    <span>HPA</span>
-                </div>
-                <div id="sunrise">
-                    <span>Wschód słonca</span>
-                    <span id="sris">9:12</span>
-                </div>
-                <div id="sunset">
-                    <span>Zachód słonca</span>
-                    <span id="sset">21:09</span>
-                </div>
+
+               <div id="bottom">
+                    
+                    <div id="sunrise">
+                        <span>Wschód słonca</span>
+                        <span id="sris">9:12</span>
+                    </div>
+                    <div id="sunset">
+                        <span>Zachód słonca</span>
+                        <span id="sset">21:09</span>
+                    </div>
+               </div>
+                
+                
             </div>
                 
 

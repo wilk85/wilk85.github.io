@@ -1,20 +1,26 @@
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", (event)=> {
     console.log("DOM fully loaded and parsed");
 });
 
 let submitButton = document.getElementById('submit1');
+
 
 // let box1 = document.getElementById('box-1');
 // let box2 = document.getElementById('box-2');
 // let box3 = document.getElementById('box-3');
 // let box4 = document.getElementById('box-4');
 
-let inputWindow = document.getElementById('input1').addEventListener('input', function(e){
+let inputWindow = document.getElementById('input1').addEventListener('input', (e)=>{
     if(e.target.value == 0){
         // console.log(e.target.value);
         console.log('jest pusto');
     };    
 });
+
+
+// document.getElementById('pick-background').addEventListener('click', function(){
+//     document.getElementById('pick-background').style.opacity = 1;
+// });
 
 document.getElementById('arrowr').addEventListener('click', ()=>{
     document.getElementById('box-container').classList.toggle('none');
@@ -45,6 +51,7 @@ change(8, 3);
 //         // console.log(pogoda.data[0].sunset); //zachód
 //         // console.log(pogoda.data[0].pres); //cisnienie hpa
 //         // console.log(pogoda.data[0].app_temp); //odczuwalna
+//         // console.log(pogoda.data[0].vis); //widoczność
 //         console.log(pogoda.data[0].temp); //aktualna temp *
 //         // console.log(pogoda.data[0].weather.description); //opis *
 //         // console.log((pogoda.data[0].wind_spd.toFixed(1))); //prędkosć wiatru *

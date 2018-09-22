@@ -24,13 +24,13 @@ body, html{
     justify-content: space-evenly;
     font-family: 'Mitr', sans-serif;
     font-weight: 200;
+    padding: 10px 0;
 }
 #container-box-background{
     display: flex;
     flex-direction: column;
     width: 30%;
-    margin: 10px ;
-    padding: 4px 8px;
+    margin: 10px;
     /* margin: 0 auto; */
 }
 #container-events{
@@ -39,13 +39,16 @@ body, html{
     height: 120px;
     width: 30%;
     margin: 10px;
-    padding: 4px 8px;
 }
 #container-weather{
-    width: 28%;
-    background-color: black;
+    display: flex;
+    width: 20%;
+    background-color: var(--box_color);
     margin: 10px;
-    padding: 4px 8px;
+    transition: 0.4s;
+}
+#container-weather:hover{
+    background-color: rgba(85, 85, 85, 0.85);
 }
 
 
