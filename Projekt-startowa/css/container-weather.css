@@ -1,10 +1,16 @@
 #container-info{
-    padding: 6px 8px;
+    padding: 6px 10px;
     display: flex;
     flex-wrap: wrap;
-    font-family: 'Rubik', sans-serif;
-    border: var(--box_border);
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 5px;
+    /* border: var(--box_border);
+    background-color: var(--box_color); */
+    flex: 1;
 }
+/* #container-info:hover{
+    background-color: rgba(85, 85, 85, 0.85);
+} */
 #container-info span{
     font-size: 0.66em;
     font-weight: 300;   
@@ -32,7 +38,8 @@
 /* TOP */
 #top{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    padding: 0 4px;
     width: 100%;
     height: 30px;
     line-height: 40px;
@@ -72,6 +79,7 @@
     width: 100%;
     align-items:center;
     height:25px;
+    padding: 0 4px;
 }
 #app-temp{
     width: 50%;
@@ -90,6 +98,7 @@
     align-items: center;
     width: 100%;
     height: 25px;
+    padding: 0 4px;
 }
 #pressure{
     width: 50%;
@@ -104,6 +113,7 @@
     width: 100%;
     align-items: center;
     height: 25px;
+    padding: 0 4px;
 }
 #sunrise{
     width: 50%;

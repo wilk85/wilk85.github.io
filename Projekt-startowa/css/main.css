@@ -1,6 +1,10 @@
 @import './container-weather.css';
 @import './container-events.css';
 @import './container-box-background.css';
+@import './container-btn-hide.css';
+@import './container-clock.css';
+@import './container-date.css';
+@import './js-class.css';
 
 :root{
     --box_color: rgba(85, 85, 85, 0.65);
@@ -12,17 +16,24 @@ body, html{
     font-size: 20px;
     color: #fff;
     /* background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(../img/img14.jpg); */
-    background-image: url(../img/img5.jpg);
+    background-image: url(../img/img15.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
     box-sizing: border-box;
 }
+#wrapper{
+    /* width: 96%; */
+    /* background-color: rgba(255, 0, 0, 0.246); */
+    margin: 0 auto;
+    max-width: 1300px;
+}
 .container-flex{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    font-family: 'Mitr', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: 200;
     padding: 10px 0;
 }
@@ -30,36 +41,43 @@ body, html{
     display: flex;
     flex-direction: column;
     width: 30%;
-    margin: 10px;
-    /* margin: 0 auto; */
 }
 #container-events{
     display: flex;
-    /* background-color: black; */
+    justify-self: center;
     height: 120px;
-    width: 30%;
-    margin: 10px;
+    width: 35%;
 }
 #container-weather{
     display: flex;
-    width: 20%;
-    background-color: var(--box_color);
-    margin: 10px;
-    transition: 0.4s;
-}
-#container-weather:hover{
-    background-color: rgba(85, 85, 85, 0.85);
+    width: 25%;
 }
 
-
-/* klasy dla js */
-.buttonDisabled{
-    background-color: #999;
-    color: #fff;
-    border: 2px solid red;
+/* MID */
+#container-flex-mid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-family: 'Rubik', sans-serif;
+    align-items: flex-end;
+    font-weight: 200;
+    padding: 10px 0;
+    margin-top: 20%;
+    /* height: 40px; */
 }
-.inputDisabled{
-    border: 2px solid red;
+#container-btn-hide{
+    display: flex;
+    width: 30%;
+}
+#container-clock{
+    display: flex;
+    width: 35%;
+    justify-content: center;
+}
+#container-date{
+    display: flex;
+    width: 25%;
+    justify-content: center;
 }
 
 /* font-family: 'Mitr', sans-serif;

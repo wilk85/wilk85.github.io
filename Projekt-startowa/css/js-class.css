@@ -1,0 +1,19 @@
+.buttonDisabled{
+    background-color: #999;
+    color: #fff;
+    border: 2px solid red;
+}
+.inputDisabled{
+    border: 2px solid red;
+}
+.none{
+    /* display: none; */
+    visibility: hidden;
+}
+.visible{
+    visibility: visible;
+    font-weight: 400;
+    background-color: rgba(68, 68, 68, 0.4);
+    height: 100px;
+    padding: 20px 5px;
+}

@@ -1,4 +1,3 @@
-
 .container-message{
     /* background-image: url(../img/img1.jpg); */
     /* background-image: url(../img/img4.jpg); */
@@ -7,44 +6,59 @@
     /* background-image: url(../img/img14.jpg); */
     display: flex;
     flex-direction: column;
-    background-color: black;
+    /* background-color: var(--box_color);
+    border: var(--box_border); */
+    padding: 10px 8px;
 }
+.container-message:hover{
+    background-color: rgba(85, 85, 85, 0.85);
+}
+
+/* INPUTY */
 #username-div{
-    background-color: #aaa;
-}
-.message{
-    justify-content: center;
+    /* background-color: #aaa; */
+    display: flex;
+    height: 40px;
 }
 input{
-    border-radius: 2px;
-    border: 1px solid #333;
     font-weight: 400;
-    font-size: 0.6em;
-    color: #111;
-    text-transform: uppercase;
-    line-height: 20px;
-    padding: 0.3em 0.5em;
-    background-color: #fff;
+    font-size: 0.7em;
+    color: #fff;
+    line-height: 15px;
+    padding: 5px 8px;
+    /* background-color: transparent; */
+    background-color: rgba(0,0,0,0.4);
     outline: none;
+    /* border: var(--box_border); */
+    /* border-radius: 5px; */
+    border: none;
+    border-radius: 5px;
 }
 ::placeholder{
-    color: #555;
-    text-transform: uppercase;
+    color: #fff;
     font-size: 1em;
 }
 input[type=text]{
     width: 160px;
-    text-transform: capitalize;
 }
 input[type=submit]{
-    width: 80px;   
+    width: 80px;
     margin-left: 0.4em;
+    cursor: pointer;
 }
-.message, .username{
+
+/* POWITANIE */
+.message{
+    justify-content: center;
+    height: 60px;
+    align-items: center;
+}
+.message{
     display: flex;
 }
 .message span{
-    margin: 0.2em 0.1em;
-    font-size: 2em;
-    display: flex;
+    margin: 5px;
+    margin-top: 10px;
+    font-size: 2.1em;
+    /* font-weight: 300; */
 }

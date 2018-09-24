@@ -1,0 +1,14 @@
+
+#btn-h{
+    width: 100px;
+    background-color: var(--box_color);
+    color: #fff;
+    border: var(--box_border);
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    height: 40px;
+}
+#btn-h:hover{
+    background-color: rgba(85, 85, 85, 0.85);
+}

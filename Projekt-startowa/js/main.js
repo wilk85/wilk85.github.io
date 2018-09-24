@@ -4,26 +4,11 @@ document.addEventListener("DOMContentLoaded", (event)=> {
 
 let submitButton = document.getElementById('submit1');
 
-
-// let box1 = document.getElementById('box-1');
-// let box2 = document.getElementById('box-2');
-// let box3 = document.getElementById('box-3');
-// let box4 = document.getElementById('box-4');
-
 let inputWindow = document.getElementById('input1').addEventListener('input', (e)=>{
     if(e.target.value == 0){
         // console.log(e.target.value);
         console.log('jest pusto');
     };    
-});
-
-
-// document.getElementById('pick-background').addEventListener('click', function(){
-//     document.getElementById('pick-background').style.opacity = 1;
-// });
-
-document.getElementById('arrowr').addEventListener('click', ()=>{
-    document.getElementById('box-container').classList.toggle('none');
 });
 
 // OBSŁUGA PRZYCISKÓW
@@ -33,14 +18,26 @@ const change = (box_id, img_nr)=>{ //box_id 1-8 / img_nr 1-18
     });
 };
 
-change(1, 18);
-change(2, 14);
-change(3, 12);
-change(4, 8);
-change(5, 10);
-change(6, 2);
-change(7, 4);
-change(8, 3);
+change(1, 1);
+change(2, 2);
+change(3, 3);
+change(4, 4);
+change(5, 5);
+change(6, 6);
+change(7, 7);
+change(8, 8);
+
+//przycisk ukrywania divów
+const hideDiv = (btn_id, div_id) =>{
+    document.getElementById(btn_id).addEventListener('click', ()=>{
+        document.getElementById(div_id).classList.toggle('none');
+        // console.log('działa');
+});
+};
+
+hideDiv('arrowr', 'box-container');
+hideDiv('btn-h', 'container-box-background');
+hideDiv('btn-h', 'container-weather');
 
 
 // function getCity(city){
@@ -88,22 +85,24 @@ change(8, 3);
 // });
 
 
-// const pobierzDane = () => {
-//     // console.log(document.getElementById('input1').value);
-//     let data = document.getElementById('input1');
-    
-//     document.getElementById('msg-right').innerText = data;
-//     //jesli imię zostało wpisane w pole, to elementy input zostaną schowane
-//     // if(data.value.length > 1){
-//     //     document.getElementById('submit1').disabled = true;
-//     //     document.getElementById('info-text').innerText('Podaj poprawne imię');
-//     // } else {
-        
-//     //     document.getElementById('username-div').style.display = 'none';
-//     // }
-//   };
+const pobierzDane = () => {
+    // console.log(document.getElementById('input1').value);
+    let data = document.getElementById('input1').value;
+    document.getElementById('msg-right').innerText = data;
+    document.getElementById('container-message').classList.add('none');
+    document.getElementById('message').classList.add('visible');
 
-// document.getElementById('submit1').addEventListener('click', pobierzDane);
+    //jesli imię zostało wpisane w pole, to elementy input zostaną schowane
+    // if(data.value.length > 1){
+    //     document.getElementById('submit1').disabled = true;
+    //     document.getElementById('info-text').innerText('Podaj poprawne imię');
+    // } else {
+        
+    //     document.getElementById('username-div').style.display = 'none';
+    // }
+  };
+
+document.getElementById('submit1').addEventListener('click', pobierzDane);
 
 
 
