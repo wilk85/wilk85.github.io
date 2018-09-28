@@ -1,0 +1,54 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #444;
+    color: #eee;
+}
+#container{
+    display: flex;
+    /* flex-direction: column; */
+    text-align: center;
+    justify-items: center;
+}
+#container-left {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 15px 0;
+    width: 15%;
+    border: 3px solid #aaa;
+    /* text-align: center;  */
+    /* background-color: rebeccapurple; */
+}
+#container-right{
+    width: 50%;
+    /* background-color: red; */
+}
+p{
+    margin: 3px auto;
+}
+span{
+    /* color: crimson; */
+    font-weight: bold;
+    /* margin-left: 20px; */
+}
+.jeden{
+    margin-right: 5px;
+}
+
+/* #numer, #dzien, #cena{
+    width: 20%;
+    display: flex;
+}
+#numer{
+    background-color: yellow;
+}
+#dzien{
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+}
+#cena{
+    background-color: rebeccapurple;
+} */

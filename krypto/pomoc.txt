@@ -1,0 +1,14 @@
+// konwersja do daty normalnej 
+new Date(data.Data[0].time *1000).toLocaleDateString() 
+
+// Pętla do wywołan json-ajax
+let range = (start, end) =>{
+            let arr = [];
+            for(let i=start; i<=end; i++){
+                arr.push(i);
+                console.log('('+i+')'+' -', new Date(data.Data[i].time*1000).toLocaleDateString(), data.Data[i].close);
+            }
+   
+        }
+        
+        range(0,49);
