@@ -1,7 +1,8 @@
 body,html{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
     background-color: #444;
     color: #eee;
 }
@@ -11,31 +12,61 @@ body,html{
     text-align: center;
     justify-items: center;
 }
-#container-left {
+/* #container-left {
     display: flex;
     flex-direction: column;
     margin: 10px;
     padding: 15px 0;
     width: 15%;
     border: 3px solid #aaa;
+    flex: 1;
     /* text-align: center;  */
     /* background-color: rebeccapurple; */
-}
+
 #container-right{
-    width: 50%;
+    display: flex;
+    width: 100%;
+    margin: 10px;
+    padding: 15px 0;
+    border: 3px solid #aaa;
     /* background-color: red; */
+}
+#inner-cont{
+    display: flex;
+    width: 100%;
+}
+.month-cont{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+.month{
+    margin-bottom: 5px;
+}
+.m-result{
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+}
+.m-left, .m-right{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+.m-left{
+    font-weight: 600;
 }
 p{
     margin: 3px auto;
+    font-size: 0.8em;
+    font-weight: 400;
 }
-span{
-    /* color: crimson; */
-    font-weight: bold;
-    /* margin-left: 20px; */
-}
+
+/* 
 .jeden{
     margin-right: 5px;
-}
+} */
 
 /* #numer, #dzien, #cena{
     width: 20%;
