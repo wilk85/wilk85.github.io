@@ -27,12 +27,12 @@ body, html{
     /* width: 96%; */
     /* background-color: rgba(255, 0, 0, 0.246); */
     margin: 0 auto;
-    max-width: 1300px;
+    max-width: 1280px;
 }
 .container-flex{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     font-family: 'Rubik', sans-serif;
     font-weight: 200;
     padding: 10px 0;
@@ -40,17 +40,19 @@ body, html{
 #container-box-background{
     display: flex;
     flex-direction: column;
-    width: 30%;
+    align-items: center;
+    /* width: 30%; */
+    margin-left: 5%;
 }
 #container-events{
     display: flex;
-    justify-self: center;
-    height: 120px;
-    width: 35%;
+    justify-content: center;
+    /* width: 25%; */
+    margin-left: 5%;
 }
 #container-weather{
     display: flex;
-    width: 25%;
+    width: 33%;
 }
 
 /* MID */

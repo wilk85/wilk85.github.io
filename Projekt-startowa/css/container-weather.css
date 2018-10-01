@@ -1,11 +1,11 @@
 #container-info{
-    padding: 6px 10px;
+    padding: 6px 0px;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
     background-color: rgba(0,0,0,0.4);
     border-radius: 5px;
-    /* border: var(--box_border);
-    background-color: var(--box_color); */
+    margin: 0 auto;
     flex: 1;
 }
 /* #container-info:hover{
@@ -15,112 +15,39 @@
     font-size: 0.66em;
     font-weight: 300;   
 }
-#pressure, #sunset, #sunrise, 
-#visib, #app-temp, #temp-wind{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-#city, #temp-curr, #temp-info{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-#temp-wind, #visib, #sunset{
-    padding-left: 37px;
-}
-#app-temp span, #temp-wind span, #pressure span,
-#visib span, #sunset span, #sunrise span{
-    margin: 0 2px;
-}
 
-
-/* TOP */
-#top{
+#left, #mid, #right{
     display: flex;
-    justify-content: space-evenly;
-    padding: 0 4px;
-    width: 100%;
-    height: 30px;
-    line-height: 40px;
-    /* align-content: center; */
-    /* align-items: center; */
-}
-#city{
-    width: 34%;
-    justify-content: flex-start;
-    flex-direction: row;
-    line-height: 45px;
-    font-size: 1.3em;
-}
-#temp-curr{
-    width: 23%;
-    display: flex;
+    flex-direction: column;
+    margin: 0 3px;
     justify-content: center;
-    /* background-color: rebeccapurple; */
-    /* wygląd na media query */
-    /* justify-content: flex-end; */
-    /* padding-right: 8px; */
 }
-#temp-curr span{
-    font-size: 1.3em;
-    font-weight: 300;
+#left{
+    height: 100%;
 }
-#temp-info{
-    width: 45%;
-    display: flex;
-    justify-content: flex-start;
-    font-size: 1.3em;    
-}
-
-/* MID */
 #mid{
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+#mid #temp{
     display: flex;
-    width: 100%;
-    align-items:center;
-    height:25px;
-    padding: 0 4px;
-}
-#app-temp{
-    width: 50%;
-}
-#app-temp span{
+    height: 66%;
+    align-items: center;
     justify-content: center;
 }
-#temp-wind{
-    width: 50%;
-    /* */
+#right{
+    margin-right: 0;
+}
+#city span, #temp-curr span, #temp-info span {
+    font-size: 1em;    
+}
+#mid #temp span{
+    font-size: 1.2em;
 }
 
-/* MID2 */
-#mid2{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 25px;
-    padding: 0 4px;
-}
-#pressure{
-    width: 50%;
-}
-#visib{
-    width: 50%;
-}
 
-/* BOTTOM */
-#bottom{
-    display: flex;
-    width: 100%;
-    align-items: center;
-    height: 25px;
-    padding: 0 4px;
-}
-#sunrise{
-    width: 50%;
-}
-#sunset{
-    width: 50%;
-}
+
 
 
 

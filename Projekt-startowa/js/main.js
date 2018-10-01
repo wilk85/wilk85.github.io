@@ -40,6 +40,7 @@ hideDiv('btn-h', 'container-box-background');
 hideDiv('btn-h', 'container-weather');
 
 
+
 // function getCity(city){
 //     $.getJSON('https://api.weatherbit.io/v2.0/current?&city='+ city +'&country=PL&lang=pl&key=8e630ea59f8b4e0cb5d8c3389eb7c6f0', function(pogoda){
 //         // console.log(pogoda);

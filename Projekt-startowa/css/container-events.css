@@ -10,9 +10,6 @@
     border: var(--box_border); */
     padding: 10px 8px;
 }
-.container-message:hover{
-    background-color: rgba(85, 85, 85, 0.85);
-}
 
 /* INPUTY */
 #username-div{
@@ -50,6 +47,7 @@ input[type=submit]{
 /* POWITANIE */
 .message{
     justify-content: center;
+    justify-items: center;
     height: 60px;
     align-items: center;
 }
