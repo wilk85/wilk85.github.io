@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", (event)=> {
 window.onload = () =>{
     timer();
     datePick();
-    addClass('btn-c', 'none');
+   
 }
 
 // ZMIENNE
@@ -31,7 +31,7 @@ const addText = (id, text_val)=>{
 };
 // // //
 
-
+addClass('btn-c', 'none');
 
 // let inputWindow = input1.addEventListener('input', (e)=>{
 //     if(e.target.value == 0){
