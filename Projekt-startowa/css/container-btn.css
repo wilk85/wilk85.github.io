@@ -1,5 +1,5 @@
 
-#btn-h{
+#btn-h, #btn-c{
     width: 100px;
     background-color: var(--box_color);
     color: #fff;
@@ -8,7 +8,9 @@
     outline: none;
     cursor: pointer;
     height: 40px;
+    margin-right:10px;
+    transition: all 0.4s;
 }
-#btn-h:hover{
+#btn-h:hover, #btn-c:hover{
     background-color: rgba(85, 85, 85, 0.85);
 }

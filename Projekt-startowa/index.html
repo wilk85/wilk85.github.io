@@ -13,30 +13,40 @@
 </head>
 <body>
 
+    <!-- Zewnętrzny kontener trzymający szerokość -->
     <div id="wrapper">
+
+        <!-- Kontener trzymający flex -->
         <section id="container-flex" class="container-flex">
 
-            <div id="container-box-background">
-                <div id="pick-background">
-                
-                    <span id="text">Kliknij żeby wybrać tło</span> 
+            <!-- Lewa / kontener -->
+            <!-- <div id="left" class="left"> -->
+               
+                <!-- wybieranie tła + przycisk do ukrywania  -->
+                <div id="container-box-background">
+                    <div id="pick-background">
                     
-                    <i id='arrowr' class="fas fa-angle-double-right"></i>
-                    <!-- <i id='exit' class="fas fa-times"></i> -->
-                </div>
+                        <span id="text">Kliknij żeby wybrać tło</span> 
+                        
+                        <i id='arrowr' class="fas fa-angle-double-right"></i>
+                        <!-- <i id='exit' class="fas fa-times"></i> -->
+                    </div>
 
-                <div id='box-container' class="box-container none">
-                    <div id="box-1" class="box-1 boxx">1</div>
-                    <div id="box-2" class="box-2 boxx">2</div>
-                    <div id="box-3" class="box-3 boxx">3</div>
-                    <div id="box-4" class="box-4 boxx">4</div>
-                    <div id="box-5" class="box-5 boxx">5</div>
-                    <div id="box-6" class="box-6 boxx">6</div>
-                    <div id="box-7" class="box-7 boxx">7</div>
-                    <div id="box-8" class="box-8 boxx">8</div>
+                    <div id='box-container' class="box-container none">
+                        <div id="box-1" class="box-1 boxx">1</div>
+                        <div id="box-2" class="box-2 boxx">2</div>
+                        <div id="box-3" class="box-3 boxx">3</div>
+                        <div id="box-4" class="box-4 boxx">4</div>
+                        <div id="box-5" class="box-5 boxx">5</div>
+                        <div id="box-6" class="box-6 boxx">6</div>
+                        <div id="box-7" class="box-7 boxx">7</div>
+                        <div id="box-8" class="box-8 boxx">8</div>
+                    </div>
                 </div>
-            </div>
+                
+            <!-- </div> -->
 
+            <!-- Środek / pobieranie imienia + godzina -->
             <div id="container-events" class="container-events">
                 <div id="container-message" class="container-message">
                     <div id="username-div" class="username">
@@ -51,6 +61,7 @@
                 </div>
             </div>
 
+            <!-- Prawa / pogoda + data dnia -->
             <div id="container-weather" class="container-weather">
 
                 <div id="container-info">
@@ -113,12 +124,14 @@
 
         <section id="container-flex-mid">
 
-            <div id="container-btn-hide">
+            <div id="container-btn">
                 <button id="btn-h">Ukryj</button>
+                <button id="btn-c">Wyczyść</button>
+                
             </div>
-
+           
             <div id="container-clock">
-                <div id="clock">21:12</div>
+                <div id="clock"></div>
             </div>
 
             <div id="container-date">

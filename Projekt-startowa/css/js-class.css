@@ -7,13 +7,10 @@
     border: 2px solid red;
 }
 .none{
-    /* display: none; */
     visibility: hidden;
 }
 .visible{
     visibility: visible;
     font-weight: 400;
-    background-color: rgba(68, 68, 68, 0.4);
-    height: 100px;
-    padding: 20px 5px;
+    background-color: rgba(0,0,0,0.4);  
 }

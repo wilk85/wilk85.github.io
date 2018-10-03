@@ -24,7 +24,11 @@
     cursor: pointer;
     font-size: 1.2em;
     color: rgb(213, 235, 15);
+    transition: all 0.4s;
     /* height: 22px; */
+}
+#arrowr:hover{
+    color: rgb(226, 146, 8)
 }
 
 #box-container{
@@ -41,7 +45,7 @@
     padding: 4px 11px;
     margin-top: 4px;
     transition: 0.4s;
-    flex: 1;
+    /* flex: 1; */
 }
 .boxx{
     height: 20px;

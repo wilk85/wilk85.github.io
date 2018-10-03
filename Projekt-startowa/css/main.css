@@ -1,7 +1,7 @@
 @import './container-weather.css';
 @import './container-events.css';
 @import './container-box-background.css';
-@import './container-btn-hide.css';
+@import './container-btn.css';
 @import './container-clock.css';
 @import './container-date.css';
 @import './js-class.css';
@@ -37,10 +37,14 @@ body, html{
     font-weight: 200;
     padding: 10px 0;
 }
+#left{
+    display: flex;
+    flex-direction: column;
+}
 #container-box-background{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     /* width: 30%; */
     margin-left: 5%;
 }
@@ -49,6 +53,9 @@ body, html{
     justify-content: center;
     /* width: 25%; */
     margin-left: 5%;
+    /* height: 100%; */
+    flex: 1;
+    flex: 0;
 }
 #container-weather{
     display: flex;
@@ -59,27 +66,29 @@ body, html{
 #container-flex-mid{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     font-family: 'Rubik', sans-serif;
     align-items: flex-end;
     font-weight: 200;
     padding: 10px 0;
-    margin-top: 20%;
+    /* margin-top: 20%; */
     /* height: 40px; */
 }
-#container-btn-hide{
+#container-btn{
     display: flex;
-    width: 30%;
+    /* width: 30%; */
+    margin-left: 5%;
 }
 #container-clock{
     display: flex;
-    width: 35%;
-    justify-content: center;
+    flex:;
+    /* width: 35%; */
+    /* justify-content: center; */
 }
 #container-date{
     display: flex;
-    width: 25%;
-    justify-content: center;
+    /* width: 25%; */
+    /* justify-content: center; */
 }
 
 /* font-family: 'Mitr', sans-serif;

@@ -6,7 +6,7 @@
     background-color: rgba(0,0,0,0.4);
     border-radius: 5px;
     margin: 0 auto;
-    flex: 1;
+    /* flex: 1; */
 }
 /* #container-info:hover{
     background-color: rgba(85, 85, 85, 0.85);
