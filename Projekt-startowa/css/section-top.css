@@ -1,0 +1,14 @@
+#container-box-bacground, #container-events{
+    display: flex;
+}
+#container-box-background{
+    flex-direction: column;
+    margin-left: 5%;
+}
+#container-events{
+    justify-content: center;
+    margin-left: 5%;
+}
+#container-weather{
+    width: 33%;
+}

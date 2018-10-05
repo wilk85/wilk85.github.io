@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Strona startowa - tylko desktop</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Martel+Sans:200,300,400,600,700,800|Mitr:200,300,400,500,600,700&amp;subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&amp;subset=latin-ext" rel="stylesheet">
@@ -68,11 +68,11 @@
                     
                     <div id="left">
                         <div id="city">
-                            <span>Kraków</span>
+                            <span id="data-city">Kraków</span>
                         </div>
                         <div id="app-temp">
-                            <span>Odczuw. temp:</span>
-                            <span id="app">19</span><span> &deg;</span>
+                            <span>Wilgotność:</span>
+                            <span id="app">19</span><span> %</span>
                         </div>  
                         <div id="pressure">
                             <span>Ciśnienie:</span>
@@ -90,7 +90,9 @@
                             <span>Akt. temp</span>
                         </div>
                         <div id="temp">
-                            <span >16.2<span> &deg;</span></span>
+                            <span id="data-temp">16.2 </span>
+                            <span>&nbsp;&deg;</span>
+                           
                         </div>
                     </div>
 
@@ -131,11 +133,11 @@
             </div>
            
             <div id="container-clock">
-                <div id="clock"></div>
+                <span id="clock"></span>
             </div>
 
             <div id="container-date">
-                <div id="date">Poniedziałek 24.09</div>
+                <span id="date">Poniedziałek 24.09</span>
             </div>
 
         </section>

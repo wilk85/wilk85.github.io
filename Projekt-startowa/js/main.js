@@ -3,9 +3,9 @@ document.addEventListener("DOMContentLoaded", (event)=> {
 });
 
 window.onload = () =>{
+    back_img();
     timer();
-    datePick();
-   
+    datePick();  
 }
 
 // ZMIENNE
@@ -14,6 +14,7 @@ let btnC = document.getElementById('btn-c');
 let btnH = document.getElementById('btn-h');
 let input1 = document.getElementById('input1');
 let date1 = document.getElementById('date');
+let body = document.body;
 
 //
 
@@ -32,6 +33,13 @@ const addText = (id, text_val)=>{
 // // //
 
 addClass('btn-c', 'none');
+body.style.backgroundImage = 'url(img/img1.jpg)';
+
+const back_img = () =>{
+    if(localStorage.image !== null){
+        body.style.backgroundImage = localStorage.getItem('image');
+    }
+};
 
 // let inputWindow = input1.addEventListener('input', (e)=>{
 //     if(e.target.value == 0){
@@ -43,7 +51,9 @@ addClass('btn-c', 'none');
 // OBSŁUGA PRZYCISKÓW ZMIANY TŁA
 const change = (box_id, img_nr)=>{ //box_id 1-8 / img_nr 1-18
     document.getElementById('box-'+box_id).addEventListener('click', ()=>{
-    document.body.style.backgroundImage = "url('./img/img"+img_nr+".jpg')";
+    let curr_img = body.style.backgroundImage = "url('./img/img"+img_nr+".jpg')";
+    localStorage.setItem('image', curr_img);
+   
     });
 };
 
@@ -59,9 +69,7 @@ change(8, 8);
 //przycisk ukrywania divów
 const hideDiv = (btn_id, div_id) =>{
     document.getElementById(btn_id).addEventListener('click', ()=>{
-        document.getElementById(div_id).classList.toggle('none');    
-        // console.log('działa');
-        btnToggle();
+        document.getElementById(div_id).classList.toggle('none');
     });
 };
 
@@ -79,26 +87,32 @@ hideDiv('btn-h', 'container-weather');
 // };
 
 
-// function getCity(city){
-//     $.getJSON('https://api.weatherbit.io/v2.0/current?&city='+ city +'&country=PL&lang=pl&key=8e630ea59f8b4e0cb5d8c3389eb7c6f0', function(pogoda){
-//         // console.log(pogoda);
-//         console.log(pogoda.data[0].city_name); //miasto *
-//         // console.log(pogoda.data[0].sunrise); //wschód
-//         // console.log(pogoda.data[0].sunset); //zachód
-//         // console.log(pogoda.data[0].pres); //cisnienie hpa
-//         // console.log(pogoda.data[0].app_temp); //odczuwalna
-//         // console.log(pogoda.data[0].vis); //widoczność
-//         console.log(pogoda.data[0].temp); //aktualna temp *
-//         // console.log(pogoda.data[0].weather.description); //opis *
-//         // console.log((pogoda.data[0].wind_spd.toFixed(1))); //prędkosć wiatru *
-       
-//         document.getElementById('temp').innerHTML = pogoda.data[0].temp;
+const getCity = (id) =>{
+    $.getJSON('http://api.openweathermap.org/data/2.5/weather?lang=pl&id='+id+'&appid=933bc312dbd028cc8ece69aa3ac0d62c', function(pogoda){
+        console.log(pogoda);
+    
+        
 
-            // localStorage.setItem('weather', getCity);
+        document.getElementById('data-city').innerHTML = pogoda.name; //miasto *
+        document.getElementById('sris').innerHTML = new Date(pogoda.sys.sunrise*1000).toLocaleTimeString().slice(0,5); //wschód
+        document.getElementById('sset').innerHTML = new Date(pogoda.sys.sunset*1000).toLocaleTimeString().slice(0,5); //zachód
+        document.getElementById('pre').innerHTML = pogoda.main.pressure; //cisnienie hpa
+        document.getElementById('app').innerHTML = pogoda.main.humidity; //wilgotnosc
+        document.getElementById('vis').innerHTML = pogoda.visibility.toFixed(1)/1000; //widoczność
+        document.getElementById('data-temp').innerHTML = (pogoda.main.temp-273.15).toFixed(1); //aktualna temp *
+        document.getElementById('desc').innerHTML = pogoda.weather[0].description; //opis *
+        document.getElementById('wspd').innerHTML= (pogoda.wind.speed/1000).toFixed(2)*3600; //prędkosć wiatru *
+        console.log(pogoda.wind.speed);
+    });
+};
+
+getCity('3094802');
+//             // localStorage.setItem('weather', getCity);
 //     });
+   
 // };
 
-// getCity('cracow');
+// getCity('Kraków');
 
 // obliczanie prędkości wiatru z m/s na km/h
 //(value/1000).toFixed(2)*3600
@@ -114,22 +128,20 @@ const pobierzDane = () => {
     addClass('container-message', 'none');
     addClass('message', 'visible');
     remClass('btn-c', 'none');
-    console.log(localStorage);
-
 };
 
 submit1.addEventListener('click', pobierzDane);
 
 //sprawdzanie czy jest pusty localStorage
 if(localStorage.getItem('name') === null){
-    console.log(localStorage);
+    // console.log(localStorage);
 //jeśli localStorage nie jest pusty, podaje informacje z poprzedniego zapisu
 } else {
     addText('msg-right', localStorage.getItem('name'));
     addClass('container-message', 'none');
     addClass('message', 'visible');
     remClass('btn-c', 'none');
-    console.log(localStorage);
+    // console.log(localStorage);
 }
 
 btnC.addEventListener('click', ()=>{
@@ -139,7 +151,7 @@ btnC.addEventListener('click', ()=>{
     addText('msg-right', '');
     addClass('btn-c', 'none');
     input1.value = '';
-    console.log(localStorage);
+    // console.log(localStorage);
 });
 
 //Zegar
@@ -149,7 +161,6 @@ let timer = () =>{
         hour: '2-digit',
         minute: '2-digit',
     }
-    // console.log(nd.toLocaleTimeString());
     addText('clock', nd.toLocaleTimeString('pl-PL', options));
 };
 setInterval(timer, 1000);
@@ -160,16 +171,8 @@ const datePick = ()=>{
         weekday: 'long',
         day: '2-digit',
         month: '2-digit'
-    };
+    }
     let d = new Date().toLocaleDateString('pl-PL', options);
     addText('date', d);
-
 };
-
 setInterval(datePick, 3600*1000);
-
-
-
-
-
-

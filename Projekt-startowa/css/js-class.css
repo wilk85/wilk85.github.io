@@ -12,5 +12,8 @@
 .visible{
     visibility: visible;
     font-weight: 400;
-    background-color: rgba(0,0,0,0.4);  
+    border-radius: 5px;
+}
+#linear{
+    background-image: linear-gradient(rgba(0,0,0,8), rgba(0,0,0,8));
 }

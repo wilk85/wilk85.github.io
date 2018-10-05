@@ -1,0 +1,43 @@
+#container-btn, #container-clock, #container-date{
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+}
+
+#container-btn{
+    width: 30%;
+    margin-left: 3%;
+}
+#container-clock{
+    width: 28%;
+    margin-left: 2%;
+}
+
+#btn-h{
+    margin-right: 8px;
+}
+#btn-h, #btn-c{
+    width: 6em;
+    background-color: rgba(0,0,0,0.5);
+    border: 2px solid hsla(0, 0%, 100%, 0.6);
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    height: 40px;
+    transition: all 0.4s;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+#btn-h:hover, #btn-c:hover{
+    background-color: rgba(0,0,0,0.8);
+}
+#container-clock span, #container-date span{
+    font-size: 2.2em;
+    -webkit-text-stroke-width: 0.08rem;
+    -webkit-text-stroke-color: #444;
+}
+#container-date span{
+    text-transform: capitalize;
+}
+

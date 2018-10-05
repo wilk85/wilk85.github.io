@@ -1,9 +1,9 @@
 #container-info{
-    padding: 6px 0px;
+    padding: 10px 0px;
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.6);
     border-radius: 5px;
     margin: 0 auto;
     /* flex: 1; */
@@ -12,15 +12,13 @@
     background-color: rgba(85, 85, 85, 0.85);
 } */
 #container-info span{
-    font-size: 0.66em;
-    font-weight: 300;   
+    font-size: 0.68em;
+    font-weight: 200;   
 }
 
 #left, #mid, #right{
-    display: flex;
     flex-direction: column;
     margin: 0 3px;
-    justify-content: center;
 }
 #left{
     height: 100%;
@@ -44,6 +42,9 @@
 }
 #mid #temp span{
     font-size: 1.2em;
+}
+#temp-info span{
+    text-transform: capitalize;
 }
 
 
