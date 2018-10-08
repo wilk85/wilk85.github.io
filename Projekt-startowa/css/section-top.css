@@ -3,12 +3,14 @@
 }
 #container-box-background{
     flex-direction: column;
-    margin-left: 5%;
+    /* margin-left: 5%; */
 }
 #container-events{
     justify-content: center;
-    margin-left: 5%;
+    /* justify-items: center; */
+    /* justify-self: center; */
+    /* margin-left: 2%; */
 }
 #container-weather{
-    width: 33%;
+    width: 30%;
 }

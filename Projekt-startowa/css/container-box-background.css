@@ -11,6 +11,9 @@
 #pick-background span{
     font-size: 0.8em;
 }
+#box-label{
+    cursor: pointer;
+}
 #arrowr{ /* ikonka */
     display: flex;
     line-height: 1.4;

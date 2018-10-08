@@ -1,5 +1,8 @@
+#container-weather{
+    display: flex;
+}
 #container-info{
-    padding: 10px 0px;
+    padding: 10px 10px 10px 6px;
     display: flex;
     justify-content: space-evenly;
     width: 100%;
@@ -12,21 +15,23 @@
     background-color: rgba(85, 85, 85, 0.85);
 } */
 #container-info span{
-    font-size: 0.68em;
+    font-size: 0.66em;
     font-weight: 200;   
 }
 
 #left, #mid, #right{
     flex-direction: column;
-    margin: 0 3px;
+    margin: 0 4px;
 }
 #left{
     height: 100%;
+    margin-right: 0;
 }
 #mid{
     justify-content: center;
     align-content: center;
     align-items: center;
+    margin-right: 8px;
 }
 #mid #temp{
     display: flex;
@@ -37,11 +42,12 @@
 #right{
     margin-right: 0;
 }
-#city span, #temp-curr span, #temp-info span {
+#city span, #temp-curr span, #temp-info span{
     font-size: 1em;    
 }
+
 #mid #temp span{
-    font-size: 1.2em;
+    font-size: 1em;
 }
 #temp-info span{
     text-transform: capitalize;

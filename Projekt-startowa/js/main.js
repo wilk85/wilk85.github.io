@@ -51,9 +51,8 @@ const back_img = () =>{
 // OBSŁUGA PRZYCISKÓW ZMIANY TŁA
 const change = (box_id, img_nr)=>{ //box_id 1-8 / img_nr 1-18
     document.getElementById('box-'+box_id).addEventListener('click', ()=>{
-    let curr_img = body.style.backgroundImage = "url('./img/img"+img_nr+".jpg')";
-    localStorage.setItem('image', curr_img);
-   
+        let curr_img = body.style.backgroundImage = "url('./img/img"+img_nr+".jpg')";
+        localStorage.setItem('image', curr_img);
     });
 };
 
@@ -66,7 +65,7 @@ change(6, 6);
 change(7, 7);
 change(8, 8);
 
-//przycisk ukrywania divów
+//przyciski ukrywania divów  #btn-h, #box-label, #arrowr
 const hideDiv = (btn_id, div_id) =>{
     document.getElementById(btn_id).addEventListener('click', ()=>{
         document.getElementById(div_id).classList.toggle('none');
@@ -74,54 +73,52 @@ const hideDiv = (btn_id, div_id) =>{
 };
 
 hideDiv('arrowr', 'box-container');
+hideDiv('box-label', 'box-container');
 hideDiv('btn-h', 'container-box-background');
 hideDiv('btn-h', 'container-weather');
 
-// const btnToggle = (btnH)=>{
-//     if(btnH.value == 'Ukryj'){
-//         btnH.value = 'Pokaż';
-//     } 
-//     else if(btnH.value == 'Pokaż'){
-//         btnH.value = 'Ukryj';
-//     }
-// };
-
+//zmiana nazwy na przycisku "Ukryj"
+const btnToggle = () =>{
+    if(btnH.innerText === 'Ukryj'){
+       btnH.innerText = 'Pokaż'
+    } else {
+        btnH.innerText = 'Ukryj';
+    } 
+}
 
 const getCity = (id) =>{
     $.getJSON('http://api.openweathermap.org/data/2.5/weather?lang=pl&id='+id+'&appid=933bc312dbd028cc8ece69aa3ac0d62c', function(pogoda){
-        console.log(pogoda);
-    
+        // console.log(pogoda);
         
-
-        document.getElementById('data-city').innerHTML = pogoda.name; //miasto *
+        //miasto + konwersja z Krakow na Kraków *
+        if(pogoda.name === 'Krakow'){
+            document.getElementById('data-city').innerHTML = 'Kraków';
+        }
         document.getElementById('sris').innerHTML = new Date(pogoda.sys.sunrise*1000).toLocaleTimeString().slice(0,5); //wschód
         document.getElementById('sset').innerHTML = new Date(pogoda.sys.sunset*1000).toLocaleTimeString().slice(0,5); //zachód
         document.getElementById('pre').innerHTML = pogoda.main.pressure; //cisnienie hpa
         document.getElementById('app').innerHTML = pogoda.main.humidity; //wilgotnosc
         document.getElementById('vis').innerHTML = pogoda.visibility.toFixed(1)/1000; //widoczność
         document.getElementById('data-temp').innerHTML = (pogoda.main.temp-273.15).toFixed(1); //aktualna temp *
-        document.getElementById('desc').innerHTML = pogoda.weather[0].description; //opis *
-        document.getElementById('wspd').innerHTML= (pogoda.wind.speed/1000).toFixed(2)*3600; //prędkosć wiatru *
-        console.log(pogoda.wind.speed);
+        document.getElementById('desc').innerHTML = pogoda.weather[0].description.slice(0,10); //opis *
+        document.getElementById('wspd').innerHTML= ((pogoda.wind.speed)*3.6).toFixed(2); //prędkosć wiatru *
+        // console.log(pogoda);
     });
 };
-
-getCity('3094802');
-//             // localStorage.setItem('weather', getCity);
-//     });
-   
-// };
-
-// getCity('Kraków');
-
-// obliczanie prędkości wiatru z m/s na km/h
-//(value/1000).toFixed(2)*3600
+// getCity('3094802');
+setInterval(getCity('3094802'), 600*1000);
 
 const pobierzDane = () => {
     
     let newName = input1.value;
-    if(newName){
+    let response = document.getElementById('response');
+    console.log(response);
+    if(newName.length <= ''  || newName.length === null){
+        response.classList.remove('none');
+        return false;
+    } else {    
         localStorage.setItem('name', newName);
+        response.classList.add('none');
     }
 
     addText('msg-right', localStorage.getItem('name'));

@@ -25,8 +25,11 @@
                 <!-- wybieranie tła + przycisk do ukrywania  -->
                 <div id="container-box-background">
                     <div id="pick-background">
-                    
-                        <span id="text">Kliknij żeby wybrać tło</span> 
+                        
+                        <label for="text" id="box-label">
+                            <span id="text">Kliknij żeby wybrać tło</span>
+                        </label>
+                        
                         
                         <i id='arrowr' class="fas fa-angle-double-right"></i>
                         <!-- <i id='exit' class="fas fa-times"></i> -->
@@ -50,13 +53,13 @@
             <div id="container-events" class="container-events">
                 <div id="container-message" class="container-message">
                     <div id="username-div" class="username">
-                        <input id="input1" type="text" placeholder="Podaj swoje imię">
+                        <input id="input1" type="text" placeholder="Podaj swoje imię" required>
                         <input id="submit1" type="submit" value="Prześlij">
                     </div>
-                    
+                    <p id="response" class="none">Pole nie może być puste!</p>
                     <div id="message" class="message">
                         <span class="msg-left">Witaj, </span> 
-                        <span id="msg-right" class="msg-right">imię </span>
+                        <span id="msg-right" class="msg-right"> </span>
                     </div>
                 </div>
             </div>
@@ -68,7 +71,7 @@
                     
                     <div id="left">
                         <div id="city">
-                            <span id="data-city">Kraków</span>
+                            <span id="data-city"></span>
                         </div>
                         <div id="app-temp">
                             <span>Wilgotność:</span>
@@ -98,7 +101,7 @@
 
                     <div id="right">
                         <div id="temp-info"> 
-                                <span id="desc"> Przelotne opady </span> 
+                                <span id="desc"> </span> 
                             </div>
                         <div id="temp-wind">
                             <span>Wiatr:</span>
@@ -127,9 +130,8 @@
         <section id="container-flex-mid">
 
             <div id="container-btn">
-                <button id="btn-h">Ukryj</button>
+                <button id="btn-h" onClick=btnToggle();>Ukryj</button>
                 <button id="btn-c">Wyczyść</button>
-                
             </div>
            
             <div id="container-clock">

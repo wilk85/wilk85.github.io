@@ -44,6 +44,7 @@
 @media all and (min-width: 401px) and (max-width: 699px){
     #container-flex{
         max-width: 400px;
+		margin: 0;
     }
     
 }
@@ -51,6 +52,7 @@
 @media all and (max-width: 400px){
     #container-flex{
         min-width: 325px;   
+		margin: 0;
     }
     
 }

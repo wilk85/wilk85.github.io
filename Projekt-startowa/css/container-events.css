@@ -1,13 +1,14 @@
 .container-message{
     display: flex;
     flex-direction: column;
-    padding: 10px 8px;
+    /* padding: 10px 8px; */
 }
 
 /* INPUTY */
 #username-div{
     display: flex;
     height: 40px;
+    margin-bottom: 3px;
 }
 input{
     font-weight: 400;
@@ -57,4 +58,13 @@ input[type=submit]{
 #message-right{
     display: flex;
     flex-wrap: wrap;
+}
+#response{
+    color: rgba(222, 246, 3, 0.9);
+    font-size: 0.8em;
+    margin: 0;
+    text-align: center;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 5px;
+    padding: 6px;
 }

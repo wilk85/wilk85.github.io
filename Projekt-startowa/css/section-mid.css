@@ -6,11 +6,15 @@
 
 #container-btn{
     width: 30%;
-    margin-left: 3%;
+    /* margin-left: 5%; */
 }
 #container-clock{
-    width: 28%;
-    margin-left: 2%;
+    width: 24%;
+    /* justify-content: center; */
+    /* justify-items: center; */
+    /* justify-self: center; */
+    margin-left: 4%;
+    /* margin: 0 auto; */
 }
 
 #btn-h{
