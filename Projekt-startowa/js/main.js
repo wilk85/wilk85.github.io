@@ -91,7 +91,7 @@ const btnToggle = () =>{
 }
 
 const getCity = (id) =>{
-    $.getJSON('http://api.openweathermap.org/data/2.5/weather?lang=pl&id='+id+'&appid=933bc312dbd028cc8ece69aa3ac0d62c', function(pogoda){
+    $.getJSON('https://api.openweathermap.org/data/2.5/weather?lang=pl&id='+id+'&appid=933bc312dbd028cc8ece69aa3ac0d62c', function(pogoda){
         // console.log(pogoda);
         
         //miasto + konwersja z Krakow na Kraków *
