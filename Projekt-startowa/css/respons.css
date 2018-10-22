@@ -1,0 +1,6 @@
+@media all and (min-width:1000px) and (max-width:1280px){
+    #container-weather{
+        width: 40%;
+        max-width: 385px;
+    }
+}

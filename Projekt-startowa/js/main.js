@@ -38,6 +38,8 @@ body.style.backgroundImage = 'url(img/img1.jpg)';
 const back_img = () =>{
     if(localStorage.image !== null){
         body.style.backgroundImage = localStorage.getItem('image');
+    } else {
+        body.style.backgroundImage = '../img/img1.jpg';
     }
 };
 
@@ -51,6 +53,8 @@ const back_img = () =>{
 // OBSŁUGA PRZYCISKÓW ZMIANY TŁA
 const change = (box_id, img_nr)=>{ //box_id 1-8 / img_nr 1-18
     document.getElementById('box-'+box_id).addEventListener('click', ()=>{
+        body.style.WebkitTransition = 'background-image 0.7s';
+        body.style.MozTransition = 'background-image 0.7s';
         let curr_img = body.style.backgroundImage = "url('./img/img"+img_nr+".jpg')";
         localStorage.setItem('image', curr_img);
     });

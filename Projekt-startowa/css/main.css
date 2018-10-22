@@ -4,6 +4,7 @@
 @import './section-mid.css';
 @import './section-top.css';
 @import './js-class.css';
+@import './respons.css';
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&subset=latin-ext');
 
 :root{
@@ -15,24 +16,24 @@ body, html{
     padding: 0;
     font-size: 20px;
     color: #fff;
-    background-image: url(../img/img1.jpg);
-    /* background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)); */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
-    /* width: 100%; */
     box-sizing: border-box;
-    transition: background-image 0.5s ease;
 }
 #wrapper{
     margin: 0 auto;
     max-width: 1280px;
+    min-width: 1000px;
     display: flex;
     flex-direction: column;
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
     color: #fff;
+}
+section{
+    margin: 0 10px;
 }
 .container-flex{
     display: flex;

@@ -2,14 +2,13 @@
     display: flex;
 }
 #container-info{
-    padding: 10px 10px 10px 6px;
+    padding: 10px;
     display: flex;
     justify-content: space-evenly;
     width: 100%;
     background-color: rgba(0,0,0,0.6);
     border-radius: 5px;
     margin: 0 auto;
-    /* flex: 1; */
 }
 /* #container-info:hover{
     background-color: rgba(85, 85, 85, 0.85);
@@ -25,13 +24,16 @@
 }
 #left{
     height: 100%;
-    margin-right: 0;
+    /* margin-right: 0; */
+    margin: 0 4px;
 }
 #mid{
     justify-content: center;
     align-content: center;
     align-items: center;
     margin-right: 8px;
+    margin: 0 8px 0 4px;
+
 }
 #mid #temp{
     display: flex;
@@ -41,6 +43,7 @@
 }
 #right{
     margin-right: 0;
+    margin: 0 4px;
 }
 #city span, #temp-curr span, #temp-info span{
     font-size: 1em;    
