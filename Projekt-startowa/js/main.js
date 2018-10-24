@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", (event)=> {
 });
 
 window.onload = () =>{
+    body.classList.add('img');
     back_img();
     timer();
     datePick();  
@@ -18,6 +19,8 @@ let body = document.body;
 
 //
 
+
+
 // FUNKCJE GŁÓWNE
 const addClass = (id, id2)=>{ 
     document.getElementById(id).classList.add(id2);
@@ -30,16 +33,18 @@ const remClass = (id, id2)=>{
 const addText = (id, text_val)=>{
     document.getElementById(id).innerText = text_val;
 };
-// // //
 
+
+// UKRYCIE PRZYCISKU "UKRYJ"
 addClass('btn-c', 'none');
-body.style.backgroundImage = 'url(img/img1.jpg)';
+
 
 const back_img = () =>{
+    
     if(localStorage.image !== null){
         body.style.backgroundImage = localStorage.getItem('image');
     } else {
-        body.style.backgroundImage = '../img/img1.jpg';
+        // body.style.backgroundImage = 'url(../img/img1.jpg)';
     }
 };
 
@@ -76,9 +81,9 @@ const hideDiv = (btn_id, div_id) =>{
     });
 };
 
+hideDiv('btn-h', 'container-box-background');
 hideDiv('arrowr', 'box-container');
 hideDiv('box-label', 'box-container');
-hideDiv('btn-h', 'container-box-background');
 hideDiv('btn-h', 'container-weather');
 
 //zmiana nazwy na przycisku "Ukryj"
@@ -104,12 +109,20 @@ const getCity = (id) =>{
         document.getElementById('app').innerHTML = pogoda.main.humidity; //wilgotnosc
         document.getElementById('vis').innerHTML = pogoda.visibility.toFixed(1)/1000; //widoczność
         document.getElementById('data-temp').innerHTML = (pogoda.main.temp-273.15).toFixed(1); //aktualna temp *
-        document.getElementById('desc').innerHTML = pogoda.weather[0].description.slice(0,10); //opis *
+        //opis
+        if((pogoda.weather[0].description).length > 10){
+            document.getElementById('desc').innerHTML = pogoda.weather[0].description.slice(0,20);
+            document.getElementById('desc').style.fontSize = '0.7em';
+            document.getElementById('desc').style.fontWeight = '400';
+        } else {
+            document.getElementById('desc').innerHTML = pogoda.weather[0].description.slice(0,10);
+        }
         document.getElementById('wspd').innerHTML= ((pogoda.wind.speed)*3.6).toFixed(2); //prędkosć wiatru *
-        // console.log(pogoda);
+     
     });
 };
 // getCity('3094802');
+// odświeżanie danych z api co 10 min
 setInterval(getCity('3094802'), 600*1000);
 
 const pobierzDane = () => {
@@ -131,9 +144,10 @@ const pobierzDane = () => {
     remClass('btn-c', 'none');
 };
 
+//pobieranie danych z inputa
 submit1.addEventListener('click', pobierzDane);
 
-//sprawdzanie czy jest pusty localStorage
+//sprawdzanie czy jest pusty localStorage, czy imię zostało wpisane wcześniej
 if(localStorage.getItem('name') === null){
     // console.log(localStorage);
 //jeśli localStorage nie jest pusty, podaje informacje z poprzedniego zapisu
@@ -155,7 +169,7 @@ btnC.addEventListener('click', ()=>{
     // console.log(localStorage);
 });
 
-//Zegar
+//Zegar - format 12:01
 let timer = () =>{
     let nd = new Date();
     let options = {
