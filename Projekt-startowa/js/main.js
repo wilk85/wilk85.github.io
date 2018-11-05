@@ -110,12 +110,12 @@ const getCity = (id) =>{
         document.getElementById('vis').innerHTML = pogoda.visibility.toFixed(1)/1000; //widoczność
         document.getElementById('data-temp').innerHTML = (pogoda.main.temp-273.15).toFixed(1); //aktualna temp *
         //opis
-        if((pogoda.weather[0].description).length > 10){
+        if((pogoda.weather[0].description).length > 11){
             document.getElementById('desc').innerHTML = pogoda.weather[0].description.slice(0,30);
             document.getElementById('desc').style.fontSize = '0.7em';
             document.getElementById('desc').style.fontWeight = '400';
         } else {
-            document.getElementById('desc').innerHTML = pogoda.weather[0].description.slice(0,10);
+            document.getElementById('desc').innerHTML = pogoda.weather[0].description.slice(0,12);
         }
         document.getElementById('wspd').innerHTML= ((pogoda.wind.speed)*3.6).toFixed(2); //prędkosć wiatru *
      

@@ -1,0 +1,52 @@
+@media all and (min-width:1000px){
+    #mid{
+        width: 75%;
+    }
+    #top .boxy{
+        margin: 5px auto;
+        width: 30%;
+        /* margin: 5px; */
+    }
+}
+@media all and (min-width:700px ) and (max-width: 1000px){
+    .footer .para, .footer .para2{
+        font-size: 0.8em;
+    }
+    .box-inner .mask{
+    height: 69.6%;
+    width: 95.4%;
+    top: 1.6%;
+    left: 2.4%;
+    }
+    #top .boxy{
+        margin: 5px auto;
+        width: 35%;
+        /* margin: 5px; */
+    }
+    #mid{
+        width: 75%;
+    }
+    #mid .wrapper-mid{
+        height: 100%;
+    }
+}
+
+@media all and (min-width:500px) and (max-width: 700px){
+    #top .boxy{
+        margin: 5px auto;
+        width: 35%;
+        min-width: 250px;
+        /* margin: 5px; */
+    }
+
+    
+}
+
+@media all and (min-width: 300px) and (max-width: 500px){
+    #top .boxy{
+        margin: 5px auto;
+        width: 50%;
+        min-width: 250px;
+        /* margin: 5px; */
+    }
+}
