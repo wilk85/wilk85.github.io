@@ -111,7 +111,7 @@ const getCity = (id) =>{
         document.getElementById('data-temp').innerHTML = (pogoda.main.temp-273.15).toFixed(1); //aktualna temp *
         //opis
         if((pogoda.weather[0].description).length > 10){
-            document.getElementById('desc').innerHTML = pogoda.weather[0].description.slice(0,20);
+            document.getElementById('desc').innerHTML = pogoda.weather[0].description.slice(0,30);
             document.getElementById('desc').style.fontSize = '0.7em';
             document.getElementById('desc').style.fontWeight = '400';
         } else {
