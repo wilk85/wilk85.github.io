@@ -13,10 +13,11 @@
         font-size: 0.8em;
     }
     .box-inner .mask{
-    height: 69.6%;
-    width: 95.4%;
+    height: 69;
+    width: 96;
     top: 1.6%;
     left: 2.4%;
+    padding: 3px;
     }
     #top .boxy{
         margin: 5px auto;

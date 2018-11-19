@@ -8,7 +8,7 @@
     /* border: 2px solid #aaa; */
     border-radius: 5px;
     /* height: 100%; */
-    height: 300px;
+    height: 220px;
     text-align: center;
     line-height: 40px;
     overflow: hidden;
@@ -57,10 +57,14 @@
 }
 .boxy .footer{
     padding: 5px 10px;
-    height: 10%;
+    /* height: 10%; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    /* margin-top: 5px; */
 }
+.mask, .content-p{
+    padding: 0 0 3px 0;
+    margin: 0;
+}
+

@@ -39,16 +39,16 @@ h3,h4{
 h3{
     font-size: 1em;
     text-transform: uppercase;
-    margin-top: 5px;
+    /* margin-top: 5px; */
 }
 h4{
     font-size: 1em;
-    margin-top: 5px;
+    /* margin-top: 5px; */
 }
 p{
     color: #fff;
     font-size: 0.65em;
-    line-height: 1.6;
+    line-height: 1.4;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
@@ -155,7 +155,7 @@ section{
 /* ustawianie maski na ikonach */
 .mask{
     position: absolute;
-    height: 69.6%;
+    height: 64%;
     width: 96.6%;
     background: rgba(32, 81, 121, 0.6);
     opacity: 0;
@@ -176,8 +176,8 @@ section{
 .boxy:hover i{
     transform: scale(1.2);
 }
-.content{
-    overflow: hidden;
-    padding: 5px;
-}
 /* koniec maski */
+
+.box4, .footer, .para:hover{
+    color: #333;
+}
