@@ -1,0 +1,184 @@
+/* czcionki */
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower|Roboto:300,400,500&subset=latin-ext');
+
+/* pliki */
+@import './switch.css';
+
+
+/* 
+font-family: 'Roboto', sans-serif;
+font-family: 'Indie Flower', cursive; 
+*/
+
+
+body, html{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+#wrapper{
+    width: 100%;
+    height: 100vh;
+    /* background-color: #444; */
+}
+#flex-container{
+    /* height: 100vh; */
+    width: 100%;
+    padding: 20px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.check-main-container{
+    background-color: #444;
+    margin: 3px;
+    height: 80px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.main-container{
+    position: relative;
+    height: 40px;
+    width: 220px;
+}
+
+/* kontenery rodziców i efekt obrotu */
+.parent{
+    /* kontener na pierwszy div */
+    display: flex;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: 0.6s ease;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* klasy do js */
+.flip{
+    transform: translateX(-50%) rotateY(-90deg);
+}
+.none{
+    display: none;
+}
+.birthd{
+    font-size: 0.8em;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* koniec klas do js */
+
+
+.flex-head, .flex-mid{
+    display: flex;
+    margin: 5px 2px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.birt-container h4{
+    font-size: 0.9em;
+    text-transform: uppercase;
+    font-family: 'Indie Flower', cursive;
+    color: #fff;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+
+
+.flip-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 1px;
+}
+
+.front{
+    transform-origin: right;
+    transform: rotateY(0deg);
+    background-color: #888;
+}
+.back{
+    display: flex;
+    flex-direction: column;
+    background-color: #999;
+    transform-origin: left;
+    transform: rotateY(90deg);
+}
+.full-date-container, .age-container{
+    font-size: 0.7em;
+    font-family: 'Roboto', sans-serif;
+}
+.full-date{
+    /* display: flex; */
+    align-items: center;
+    height: 50%; 
+}
+.age{
+    /* display: flex; */
+    align-items: center;
+    height: 50%;
+}
+
+.d1{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    width: 25%;
+    font-family: 'Roboto', sans-serif;
+    margin: 1px;
+}
+.d1 .text{
+    font-size: 1em;
+}
+.d1 span{
+    font-size: 0.58em;
+}
+
+/* stylowanie przycisku dodawania konteneru fa-plus-square */
+.add-container{
+    height: 80px;
+    margin: 3px;
+    padding: 8px;
+    display: flex;
+    
+}
+.fa-plus-square{
+    /* background-color: #03a9f4; */
+    margin: auto 0;
+    color: #03a9f4;
+    font-size: 2.5em;
+}
+
+/* style dla buttons - przyciski dodawania wpisu do kontenera oraz usuwania kontenera */
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+}
+.fa-plus, .fa-minus{
+    margin: 3px;
+    font-size: 0.8em;
+}
+.fa-plus{
+    color: #03f437;
+}
+.fa-minus{
+    color: #f42703;
+}
