@@ -107,7 +107,7 @@ const getCity = (id) =>{
         document.getElementById('sset').innerHTML = new Date(pogoda.sys.sunset*1000).toLocaleTimeString().slice(0,5); //zachód
         document.getElementById('pre').innerHTML = pogoda.main.pressure; //cisnienie hpa
         document.getElementById('app').innerHTML = pogoda.main.humidity; //wilgotnosc
-        document.getElementById('vis').innerHTML = pogoda.visibility.toFixed(1)/1000; //widoczność
+        // document.getElementById('vis').innerHTML = pogoda.visibility.toFixed(1)/1000; //widoczność
         document.getElementById('data-temp').innerHTML = (pogoda.main.temp-273.15).toFixed(1); //aktualna temp *
         //opis
         if((pogoda.weather[0].description).length > 11){
