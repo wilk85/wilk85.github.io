@@ -33,7 +33,7 @@ h3,h4{
     color: #fff;
     margin: 0;
     padding: 0;
-    line-height: 2;
+    line-height: 1.8;
     font-family: 'Montserrat Alternates', sans-serif;
 }
 h3{
@@ -155,12 +155,12 @@ section{
 /* ustawianie maski na ikonach */
 .mask{
     position: absolute;
-    height: 64%;
-    width: 96.6%;
+    height: 65%;
+    width: 96.7%;
     background: rgba(32, 81, 121, 0.6);
     opacity: 0;
-    top: 1.6%;
-    left: 1.7%;
+    top: 2%;
+    left: 1.6%;
     right: 0;
     bottom: 0;
     display: flex;
@@ -170,6 +170,22 @@ section{
     align-items: center;
     border-radius: 5px;
 }
+.mask, .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+
+.mask, .content, .content-p{
+    line-height: 1;
+    /* padding: 0 0 3px 0; */
+    margin: 0;
+    color: #fff;
+}
+
 .boxy:hover .mask{
     opacity: 1;
 }
