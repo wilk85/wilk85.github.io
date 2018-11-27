@@ -77,12 +77,16 @@ section{
 }
 .wrapper-mid{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    padding: 30px 5px;
+    padding: 30px;
+    height: 320px;
     background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4));
     border-radius: 5px;
     overflow: hidden;
+    justify-content: center;
+    align-items: center;
+
 }
 
 /* style środkowej sekcji */
@@ -92,15 +96,16 @@ section{
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     align-items: center;
+    align-content: center;
     height: 20%;
-    width: 100%;
+    width: 90%;
     margin: 2px auto;
 }
 .portf-image-container{
     display: flex;
-    width: 40%;
-    height: 80%;
-    border-bottom-left-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 30%;
+    border-radius: 5px;
 }
 .portf-content{
     display: flex;
