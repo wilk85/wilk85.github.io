@@ -98,7 +98,7 @@ const setIntCount = () => {
         let time = now.getTime();
         let birthday = objName.ur.getTime();
         let timeTo = birthday - time;
-        let nowPlusYear = now.getFullYear()+1;
+        let nowPlusYear = now.getFullYear();
 
         if(now > objName.ur){
             objName.ur.setFullYear(nowPlusYear);
